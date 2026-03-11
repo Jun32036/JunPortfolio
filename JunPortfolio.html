@@ -1,0 +1,1179 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="葉軍佑（Jun-You Ye）— 倉儲管理師，2.5年以上半導體代工廠倉儲管理經驗，擅長跨部門協調與流程優化，持有 ERP 規劃師等 9 項專業證照。">
+<title>葉軍佑 — 個人履歷</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #FBFAF8;
+    --bg-elevated: #FFFFFF;
+    --bg-subtle: #F5F3EF;
+    --bg-glass: rgba(255,255,255,0.65);
+    --text-1: #171717;
+    --text-2: #4A4A4A;
+    --text-3: #8C8C8C;
+    --accent: #1B2A3D;
+    --accent-soft: #2D4A6A;
+    --gold: #C6995A;
+    --gold-light: rgba(198,153,90,0.12);
+    --border: #E8E5DF;
+    --border-light: #F0EDE8;
+    --radius: 14px;
+    --radius-sm: 8px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.02);
+    --shadow-md: 0 4px 20px rgba(0,0,0,0.05), 0 1px 4px rgba(0,0,0,0.03);
+    --shadow-hover: 0 8px 32px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.04);
+    --transition: cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Noto Sans TC', 'Outfit', sans-serif;
+    font-weight: 400;
+    color: var(--text-1);
+    background: var(--bg);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ===== NAV ===== */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    transition: all 0.4s var(--transition);
+  }
+  nav.scrolled {
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border-bottom: 1px solid rgba(0,0,0,0.04);
+  }
+
+  .nav-inner {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    color: var(--accent);
+    letter-spacing: 0.03em;
+    font-weight: 600;
+  }
+
+  .nav-links { display: flex; gap: 0.3rem; list-style: none; }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--text-3);
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 0.35rem 0.8rem;
+    border-radius: 100px;
+    transition: all 0.3s var(--transition);
+    cursor: pointer;
+    user-select: none;
+  }
+  .nav-links a svg {
+    width: 13px; height: 13px;
+    stroke: currentColor; fill: none; stroke-width: 1.5;
+  }
+  .nav-links a:hover {
+    color: var(--accent);
+    background: var(--gold-light);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    padding: 6.5rem 1.5rem 3rem;
+    text-align: center;
+    position: relative;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(ellipse at center, rgba(198,153,90,0.06) 0%, transparent 65%);
+    pointer-events: none;
+  }
+
+  .hero-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.3rem 1rem;
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-3);
+    letter-spacing: 0.1em;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.7s var(--transition) 0.1s forwards;
+  }
+  .hero-chip::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  .hero-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 400;
+    color: var(--text-1);
+    line-height: 1.1;
+    margin-bottom: 0.3rem;
+    opacity: 0;
+    animation: fadeUp 0.7s var(--transition) 0.2s forwards;
+  }
+
+  .hero-name-en {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 300;
+    color: var(--text-3);
+    letter-spacing: 0.2em;
+    margin-bottom: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.7s var(--transition) 0.3s forwards;
+  }
+
+  .hero-bio {
+    font-size: 0.95rem;
+    color: var(--text-2);
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 480px;
+    margin: 0 auto 1.5rem;
+    opacity: 0;
+    animation: fadeUp 0.7s var(--transition) 0.5s forwards;
+  }
+
+  .hero-role {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--accent);
+    letter-spacing: 0.06em;
+    margin-bottom: 0.8rem;
+    opacity: 0;
+    animation: fadeUp 0.7s var(--transition) 0.38s forwards;
+  }
+
+  .hero-cta {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 0.7s var(--transition) 0.6s forwards;
+  }
+
+  .cta-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.3rem;
+    background: var(--accent);
+    color: #fff;
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: all 0.35s var(--transition);
+  }
+  .cta-primary:hover {
+    background: var(--accent-soft);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+  .cta-primary svg {
+    width: 14px; height: 14px;
+    stroke: currentColor; fill: none; stroke-width: 1.5;
+  }
+
+  .cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.55rem 1.3rem;
+    background: var(--bg-elevated);
+    color: var(--text-2);
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: all 0.35s var(--transition);
+  }
+  .cta-secondary:hover {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+  .cta-secondary svg {
+    width: 14px; height: 14px;
+    stroke: currentColor; fill: none; stroke-width: 1.5;
+  }
+
+  .hero-contact-sub {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin-top: 1.2rem;
+    opacity: 0;
+    animation: fadeUp 0.7s var(--transition) 0.72s forwards;
+  }
+  .hero-contact-sub span {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+    color: var(--text-3);
+    font-weight: 400;
+  }
+  .hero-contact-sub svg {
+    width: 12px; height: 12px;
+    stroke: currentColor; fill: none; stroke-width: 1.5;
+  }
+
+  /* ===== LAYOUT ===== */
+  .container {
+    max-width: 820px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  section { padding: 2.5rem 0; }
+
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.5rem;
+  }
+  .section-label svg {
+    width: 14px; height: 14px;
+    stroke: var(--gold); fill: none; stroke-width: 1.5;
+    flex-shrink: 0;
+  }
+  .section-label::before {
+    content: '';
+    width: 16px;
+    height: 1.5px;
+    background: var(--gold);
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    color: var(--text-1);
+    margin-bottom: 1.8rem;
+  }
+
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border-light);
+    margin: 0;
+  }
+
+  /* ===== CARDS ===== */
+  .card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: all 0.4s var(--transition);
+  }
+  .card:hover {
+    box-shadow: var(--shadow-hover);
+    border-color: var(--border-light);
+    transform: translateY(-2px);
+  }
+
+  /* ===== TIMELINE ===== */
+  .tl { display: flex; flex-direction: column; gap: 1rem; }
+
+  .tl-card {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 1.2rem;
+    align-items: start;
+  }
+
+  .tl-date {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-3);
+    letter-spacing: 0.04em;
+    padding-top: 0.25rem;
+    line-height: 1.5;
+  }
+
+  .tl-content { flex: 1; }
+
+  .tl-title {
+    font-size: 1.08rem;
+    font-weight: 500;
+    color: var(--text-1);
+    margin-bottom: 0.1rem;
+  }
+
+  .tl-sub {
+    font-size: 0.88rem;
+    color: var(--text-3);
+    margin-bottom: 0.5rem;
+  }
+
+  .tl-body {
+    font-size: 0.88rem;
+    color: var(--text-2);
+    line-height: 1.75;
+  }
+
+  .tl-body li {
+    list-style: none;
+    padding-left: 0.9rem;
+    position: relative;
+    margin-bottom: 0.15rem;
+  }
+  .tl-body li::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0.6em;
+    width: 4px; height: 4px;
+    border-radius: 50%;
+    background: var(--gold);
+  }
+
+  /* ===== CERT GRID ===== */
+  .cert-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .cert-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.2rem 1.3rem;
+    transition: all 0.4s var(--transition);
+  }
+  .cert-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  .cert-card-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.74rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    margin-bottom: 0.7rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border-light);
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+  .cert-card-label svg {
+    width: 14px; height: 14px;
+    stroke: var(--gold); fill: none; stroke-width: 1.5;
+    flex-shrink: 0;
+  }
+
+  .cert-row {
+    padding: 0.3rem 0;
+  }
+
+  .cert-row-name {
+    font-size: 0.88rem;
+    color: var(--text-1);
+    font-weight: 400;
+    line-height: 1.45;
+  }
+
+  .cert-row-meta {
+    font-size: 0.76rem;
+    color: var(--text-3);
+    font-weight: 300;
+    margin-top: 0.05rem;
+  }
+
+  /* ===== ABOUT GRID ===== */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.8rem;
+  }
+
+  .about-card {
+    background: var(--bg-elevated);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.3rem;
+    transition: all 0.4s var(--transition);
+  }
+  .about-card:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+  }
+
+  .about-icon {
+    width: 36px; height: 36px;
+    border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 0.8rem;
+  }
+  .about-icon svg {
+    width: 18px; height: 18px;
+    stroke-width: 1.5; fill: none;
+  }
+
+  .about-card h3 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: var(--text-1);
+    margin-bottom: 0.3rem;
+  }
+
+  .about-card p {
+    font-size: 0.88rem;
+    color: var(--text-2);
+    line-height: 1.6;
+    font-weight: 300;
+  }
+
+  /* ===== SKILLS SECTION ===== */
+  .skills-row {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .skill-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0.45rem 0.9rem;
+    border-radius: 100px;
+    font-size: 0.84rem;
+    font-weight: 400;
+    transition: all 0.3s var(--transition);
+  }
+
+  .skill-chip svg {
+    width: 13px; height: 13px;
+    stroke: currentColor; fill: none; stroke-width: 1.5;
+    flex-shrink: 0;
+  }
+  .skill-chip.current {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--accent);
+  }
+
+  .skill-chip.learning {
+    background: var(--bg-elevated);
+    color: var(--text-2);
+    border: 1px solid var(--border);
+  }
+  .skill-chip.learning::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    animation: pulse 2s ease infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.4; }
+    50% { opacity: 1; }
+  }
+
+  /* ===== MILITARY ===== */
+  .military-row {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+  }
+
+  .military-badge {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--accent);
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+  }
+  .military-badge svg {
+    width: 20px; height: 20px;
+    stroke: #fff; fill: none; stroke-width: 1.5;
+  }
+
+  .military-text h4 {
+    font-size: 1.05rem;
+    font-weight: 500;
+    color: var(--text-1);
+  }
+  .military-text p {
+    font-size: 0.88rem;
+    color: var(--text-3);
+    font-weight: 300;
+  }
+
+  /* ===== METRICS ===== */
+  .metrics-row {
+    display: flex;
+    gap: 0.5rem;
+    margin: 0.8rem 0;
+  }
+
+  .metric {
+    flex: 1;
+    background: var(--bg-subtle);
+    border-radius: var(--radius-sm);
+    padding: 0.65rem 0.8rem;
+    text-align: center;
+  }
+
+  .metric svg {
+    width: 16px; height: 16px;
+    stroke: var(--gold); fill: none; stroke-width: 1.5;
+    margin-bottom: 0.3rem;
+  }
+  .metric-value {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--accent);
+    line-height: 1.2;
+  }
+
+  .metric-label {
+    font-size: 0.74rem;
+    color: var(--text-3);
+    font-weight: 400;
+    margin-top: 0.15rem;
+    letter-spacing: 0.02em;
+  }
+
+  /* ===== TAGS ===== */
+  .tags {
+    display: flex;
+    gap: 0.35rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+  .tag {
+    font-size: 0.76rem;
+    padding: 0.2rem 0.6rem;
+    background: var(--bg-subtle);
+    color: var(--text-3);
+    border-radius: 100px;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+  .tag::before {
+    content: '';
+    width: 5px; height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
+    flex-shrink: 0;
+  }
+
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center;
+    padding: 2rem 1.5rem 2.5rem;
+  }
+  .footer-line {
+    width: 24px;
+    height: 1.5px;
+    background: var(--gold);
+    margin: 0 auto 0.8rem;
+  }
+  .footer-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    color: var(--accent);
+    margin-bottom: 0.25rem;
+  }
+  .footer-copy {
+    font-size: 0.78rem;
+    color: var(--text-3);
+    letter-spacing: 0.05em;
+  }
+
+  /* ===== ANIMATIONS ===== */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.65s var(--transition), transform 0.65s var(--transition);
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal.d1 { transition-delay: 0.06s; }
+  .reveal.d2 { transition-delay: 0.12s; }
+  .reveal.d3 { transition-delay: 0.18s; }
+  .reveal.d4 { transition-delay: 0.24s; }
+
+  @media (max-width: 760px) {
+    .about-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 640px) {
+    .hero-name { font-size: 2.5rem; }
+    .section-title { font-size: 1.45rem; }
+    .cert-container, .about-grid { grid-template-columns: 1fr; }
+    .tl-card { grid-template-columns: 1fr; gap: 0.2rem; }
+    .hero-cta { flex-direction: column; align-items: center; }
+    .hero-contact-sub { flex-direction: column; align-items: center; gap: 0.5rem; }
+    .military-row { flex-direction: column; text-align: center; }
+    .metrics-row { flex-direction: column; }
+    .nav-links a { font-size: 0.78rem; padding: 0.3rem 0.5rem; }
+    .skills-row { justify-content: center; }
+  }
+
+  /* ===== HAMBURGER ===== */
+  .hamburger {
+    display: none; cursor: pointer;
+    background: none; border: none;
+    padding: 0.5rem;
+    min-width: 40px; min-height: 40px;
+    align-items: center; justify-content: center;
+    flex-direction: column;
+  }
+  .hamburger span {
+    display: block; width: 22px; height: 2.5px;
+    background: var(--text-1); margin: 3px 0;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  @media (max-width: 480px) {
+    .nav-links { display: none; }
+    .nav-links.open {
+      display: flex; flex-direction: column;
+      position: absolute; top: 52px; left: 0; width: 100%;
+      background: var(--bg-elevated);
+      backdrop-filter: blur(20px);
+      padding: 1rem 1.5rem; gap: 0.3rem;
+      border-bottom: 1px solid var(--border-light);
+      box-shadow: var(--shadow-md);
+      z-index: 100;
+    }
+    .hamburger { display: flex; }
+  }
+
+  /* ===== MUSIC BUTTON ===== */
+  .music-btn {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    z-index: 99;
+    width: 48px; height: 48px;
+    border-radius: 50%;
+    border: 1px solid var(--border);
+    background: var(--bg-elevated);
+    box-shadow: var(--shadow-md);
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.35s var(--transition);
+  }
+  .music-btn:hover {
+    box-shadow: var(--shadow-hover);
+    transform: translateY(-2px);
+    border-color: var(--gold);
+  }
+  .music-btn svg {
+    width: 20px; height: 20px;
+    stroke: var(--accent); fill: none; stroke-width: 1.5;
+    transition: stroke 0.3s;
+  }
+  .music-btn.playing svg {
+    stroke: var(--gold);
+  }
+  .music-btn.playing {
+    border-color: var(--gold);
+    animation: musicPulse 2s ease infinite;
+  }
+  @keyframes musicPulse {
+    0%, 100% { box-shadow: var(--shadow-md), 0 0 0 0 rgba(198,153,90,0.15); }
+    50% { box-shadow: var(--shadow-md), 0 0 0 8px rgba(198,153,90,0); }
+  }
+  @media print { .music-btn { display: none; } }
+
+  /* ===== PRINT FRIENDLY ===== */
+  @media print {
+    nav, .hero-cta, .hero-contact-sub, .hamburger, footer { display: none; }
+    .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
+    body { background: #fff; font-size: 11pt; line-height: 1.5; }
+    .hero { padding: 1rem 0 0.5rem; }
+    .hero-chip, .hero-name, .hero-name-en, .hero-role, .hero-bio {
+      opacity: 1 !important; animation: none !important;
+    }
+    section { padding: 0.8rem 0; break-inside: avoid; }
+    .card { border: 1px solid #ddd; box-shadow: none; break-inside: avoid; }
+    .card:hover { transform: none; box-shadow: none; }
+    .cert-card, .about-card { break-inside: avoid; }
+    .about-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .cert-container { grid-template-columns: 1fr 1fr; }
+    .skill-chip.learning::before { animation: none; }
+    .divider { margin: 0.3rem 0; }
+    * { color-adjust: exact; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav" aria-label="主要導覽列">
+  <div class="nav-inner">
+    <div class="nav-logo">JY</div>
+    <button class="hamburger" aria-label="開啟選單" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links">
+      <li><a onclick="navScrollTo('about')"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>關於</a></li>
+      <li><a onclick="navScrollTo('education')"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>學歷</a></li>
+      <li><a onclick="navScrollTo('certs')"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>證照</a></li>
+      <li><a onclick="navScrollTo('military')"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>兵役</a></li>
+      <li><a onclick="navScrollTo('experience')"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>經歷</a></li>
+      <li><a onclick="navScrollTo('skills')"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>技能</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-chip">PORTFOLIO</div>
+  <h1 class="hero-name">葉軍佑</h1>
+  <div class="hero-name-en">JUN-YOU YE</div>
+  <div class="hero-role">倉儲管理師 ｜ 物管 / 資材 / 供應鏈</div>
+  <p class="hero-bio">
+    2.5 年以上半導體代工廠倉儲管理經驗<br>
+    擅長跨部門協調、帳料準確性維護與流程優化<br>
+    具備 ERP 規劃師 + 9 項專業證照
+  </p>
+  <div class="hero-cta">
+    <a class="cta-primary" href="mailto:jun-you.ye@outlook.com">
+      <svg viewBox="0 0 24 24" role="img"><title>Email</title><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      聯繫我
+    </a>
+    <a class="cta-secondary" href="tel:0974095969">
+      <svg viewBox="0 0 24 24" role="img"><title>電話</title><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.68 2.36a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.76.32 1.55.55 2.36.68A2 2 0 0 1 22 16.92z"/></svg>
+      0974-095-969
+    </a>
+  </div>
+  <div class="hero-contact-sub">
+    <span>
+      <svg viewBox="0 0 24 24" role="img"><title>地點</title><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+      苗栗竹南 ・ 可配合台中、新竹
+    </span>
+    <span>
+      <svg viewBox="0 0 24 24" role="img"><title>到職時間</title><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      錄取後一個月可到職
+    </span>
+  </div>
+</section>
+
+<div class="container">
+<main>
+  <section id="about">
+    <div class="reveal">
+      <div class="section-label"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>About</div>
+      <h2 class="section-title">關於我</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card reveal d1">
+        <div class="about-icon" style="background: var(--gold-light);">
+          <svg viewBox="0 0 24 24" stroke="var(--gold)"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h3>復原力</h3>
+        <p>面對低潮能快速調整重回正軌，不迴避弱點，主動補強短板</p>
+      </div>
+      <div class="about-card reveal d2">
+        <div class="about-icon" style="background: rgba(27,42,61,0.08);">
+          <svg viewBox="0 0 24 24" stroke="var(--accent)"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>商業理解力</h3>
+        <p>擅長閱讀理解與邏輯推演，天然偏向理解人與制度如何運作的思維模式</p>
+      </div>
+      <div class="about-card reveal d3">
+        <div class="about-icon" style="background: rgba(76,140,120,0.1);">
+          <svg viewBox="0 0 24 24" stroke="#4C8C78"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>溝通與表達</h3>
+        <p>語言與文字相關領域表現穩定，跨部門資訊傳達與協調是日常強項</p>
+      </div>
+      <div class="about-card reveal d4">
+        <div class="about-icon" style="background: rgba(160,90,60,0.1);">
+          <svg viewBox="0 0 24 24" stroke="#A05A3C"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
+        </div>
+        <h3>審美直覺</h3>
+        <p>對視覺品質和呈現方式有自己的標準，偏好有秩序感的設計與產出</p>
+      </div>
+      <div class="about-card reveal d1">
+        <div class="about-icon" style="background: rgba(90,90,160,0.1);">
+          <svg viewBox="0 0 24 24" stroke="#5A5AA0"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>務實執行力</h3>
+        <p>遇到問題直接面對處理，不拖延不逃避，重視把事情實際完成</p>
+      </div>
+      <div class="about-card reveal d2">
+        <div class="about-icon" style="background: rgba(76,140,120,0.1);">
+          <svg viewBox="0 0 24 24" stroke="#4C8C78"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h3>興趣</h3>
+        <p>音樂、機車騎行、命理與形而上學研究、知識型冷知識蒐集</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EDUCATION -->
+  <section id="education">
+    <div class="reveal">
+      <div class="section-label"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>Education</div>
+      <h2 class="section-title">學歷</h2>
+    </div>
+    <div class="tl">
+      <div class="card tl-card reveal d1">
+        <div class="tl-date">2018.09<br>— 2022.06</div>
+        <div class="tl-content">
+          <div class="tl-title">國立勤益科技大學</div>
+          <div class="tl-sub">資訊管理系 ・ 學士</div>
+          <div class="tl-body">
+            <ul>
+              <li>大一上學期班級排名第一，商管與人文類科目表現尤為突出</li>
+              <li>在學期間取得多項國際與國家級專業證照，展現自主學習與目標執行力</li>
+              <li>具備跨領域整合能力，擅長將制度邏輯轉化為實務理解</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="card tl-card reveal d2">
+        <div class="tl-date">2015.09<br>— 2018.06</div>
+        <div class="tl-content">
+          <div class="tl-title">國立新竹高級商業職業學校</div>
+          <div class="tl-sub">資料處理科</div>
+          <div class="tl-body">
+            <ul>
+              <li>學習商業資料處理、程式設計及會計學等實務課程</li>
+              <li>奠定資訊與商業整合之基礎能力</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- CERTIFICATIONS -->
+  <section id="certs">
+    <div class="reveal">
+      <div class="section-label"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>Certifications</div>
+      <h2 class="section-title">專業證照</h2>
+    </div>
+    <div class="cert-container">
+      <div class="cert-card reveal d1">
+        <div class="cert-card-label"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>國家技術士證照</div>
+        <div class="cert-row">
+          <div class="cert-row-name">乙級電腦軟體應用技術士</div>
+          <div class="cert-row-meta">勞動部勞動力發展署</div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-row-name">丙級會計事務技術士</div>
+          <div class="cert-row-meta">勞動部勞動力發展署</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal d2">
+        <div class="cert-card-label"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>財務會計</div>
+        <div class="cert-row">
+          <div class="cert-row-name">會計能力測驗一級合格</div>
+          <div class="cert-row-meta">中華民國會計師公會全聯會</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal d3">
+        <div class="cert-card-label"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>Microsoft 國際認證</div>
+        <div class="cert-row">
+          <div class="cert-row-name">MTA: Networking Fundamentals</div>
+          <div class="cert-row-meta">2019.06 ・ Microsoft</div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-row-name">MTA: Software Development Fundamentals</div>
+          <div class="cert-row-meta">2019.06 ・ Microsoft</div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-row-name">MTA: Database Fundamentals</div>
+          <div class="cert-row-meta">2019.12 ・ Microsoft</div>
+        </div>
+      </div>
+
+      <div class="cert-card reveal d4">
+        <div class="cert-card-label"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>ERP / CRM 認證</div>
+        <div class="cert-row">
+          <div class="cert-row-name">ERP 規劃師</div>
+          <div class="cert-row-meta">2020.06 ・ CERPS 中華企業資源規劃學會</div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-row-name">CRM 顧客關係管理商品分析師</div>
+          <div class="cert-row-meta">2020.11 ・ 微析科技</div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-row-name">ERP 軟體應用師 — 製造模組</div>
+          <div class="cert-row-meta">2021.06 ・ 鼎新 Workflow ERP GP</div>
+        </div>
+        <div class="cert-row">
+          <div class="cert-row-name">ERP 軟體應用師 — 財務模組</div>
+          <div class="cert-row-meta">2021.06 ・ 鼎新 Workflow ERP GP</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- MILITARY -->
+  <section id="military">
+    <div class="reveal">
+      <div class="section-label"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Military</div>
+      <h2 class="section-title">兵役紀錄</h2>
+    </div>
+    <div class="card reveal d1">
+      <div class="military-row">
+        <div class="military-badge">
+          <svg viewBox="0 0 24 24" role="img"><title>兵役</title><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="military-text">
+          <h4>中華民國義務役 ・ 役畢</h4>
+          <p>2022.09.21 — 2022.12.31（折抵 11 日）</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="reveal">
+      <div class="section-label"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Experience</div>
+      <h2 class="section-title">工作經歷</h2>
+    </div>
+    <div class="card tl-card reveal d1">
+      <div class="tl-date">2023.06<br>— 至今</div>
+      <div class="tl-content">
+        <div class="tl-title">超豐電子股份有限公司</div>
+        <div class="tl-sub">倉儲管理師 ・ 半導體製造業 500+ 人 ・ 苗栗竹南</div>
+
+        <div class="metrics-row">
+          <div class="metric">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="metric-value">2.5 年+</div>
+            <div class="metric-label">倉儲管理經驗</div>
+          </div>
+          <div class="metric">
+            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <div class="metric-value">每日</div>
+            <div class="metric-label">物料進出庫作業</div>
+          </div>
+          <div class="metric">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="metric-value">5+ 單位</div>
+            <div class="metric-label">跨部門協調對象</div>
+          </div>
+        </div>
+
+        <div class="tl-body">
+          <ul>
+            <li>獨立負責每日物料與成品進出庫作業，維持出貨準時率達標，支撐產線不中斷運作</li>
+            <li>作為生管、司機、產線間的溝通樞紐，異常發生時即時回報並追蹤至結案，縮短異常處理反應時間</li>
+            <li>主導季度盤點差異分析，協助降低帳料差異風險；參與 5S 與 SOP 更新，減少現場人為失誤</li>
+          </ul>
+        </div>
+        <div class="tags">
+          <span class="tag">ERP 系統操作</span>
+          <span class="tag">Excel</span>
+          <span class="tag">跨部門溝通</span>
+          <span class="tag">流程優化</span>
+          <span class="tag">盤點分析</span>
+          <span class="tag">5S / SOP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <div class="reveal">
+      <div class="section-label"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Skills</div>
+      <h2 class="section-title">技能 & 學習中</h2>
+    </div>
+    <div class="card reveal d1" style="margin-bottom: 0.8rem;">
+      <div style="font-size: 0.84rem; font-weight: 500; color: var(--text-3); letter-spacing: 0.1em; margin-bottom: 0.8rem;">軟實力</div>
+      <div class="skills-row">
+        <span class="skill-chip current"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>復原力與抗壓性</span>
+        <span class="skill-chip current"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>商業理解與邏輯推演</span>
+        <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>跨部門溝通協調</span>
+        <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>審美與品質意識</span>
+        <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>務實問題解決</span>
+      </div>
+    </div>
+    <div class="card reveal d2" style="margin-bottom: 0.8rem;">
+      <div style="font-size: 0.84rem; font-weight: 500; color: var(--text-3); letter-spacing: 0.1em; margin-bottom: 0.8rem;">硬技能</div>
+      <div class="skills-row">
+        <span class="skill-chip current"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>ERP 系統操作</span>
+        <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Excel</span>
+        <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>倉儲管理</span>
+        <span class="skill-chip current"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>5S / SOP</span>
+      </div>
+    </div>
+    <div class="card reveal d3">
+      <div style="font-size: 0.84rem; font-weight: 500; color: var(--text-3); letter-spacing: 0.1em; margin-bottom: 0.8rem;">學習中</div>
+      <div class="skills-row">
+        <span class="skill-chip learning"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>SQL</span>
+        <span class="skill-chip learning"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Power BI</span>
+        <span class="skill-chip learning"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Excel 進階分析</span>
+        <span class="skill-chip learning"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Google Data Analytics</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+</div>
+
+<!-- MUSIC -->
+<audio id="bgMusic" loop preload="auto">
+  <source src="bgm.mp3" type="audio/mpeg">
+</audio>
+<button class="music-btn" id="musicBtn" aria-label="播放/暫停背景音樂" title="背景音樂">
+  <svg id="musicIcon" viewBox="0 0 24 24">
+    <path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>
+  </svg>
+</button>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-line"></div>
+  <div class="footer-name">葉軍佑 Jun-You Ye</div>
+  <div class="footer-copy">© 2026 — Built with purpose.</div>
+</footer>
+
+<script>
+  // Nav glass effect on scroll
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  }, { passive: true });
+
+  // Intersection Observer for reveals
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Smooth scroll function for nav
+  function navScrollTo(id) {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      document.querySelector('.nav-links').classList.remove('open');
+    }
+  }
+
+  // Background music toggle
+  const bgMusic = document.getElementById('bgMusic');
+  const musicBtn = document.getElementById('musicBtn');
+  const musicIcon = document.getElementById('musicIcon');
+
+  const iconPlay = '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/>';
+  const iconPause = '<path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/><line x1="1" y1="1" x2="23" y2="23" stroke-width="2"/>';
+
+  bgMusic.volume = 0.35;
+
+  musicBtn.addEventListener('click', () => {
+    if (bgMusic.paused) {
+      bgMusic.play().then(() => {
+        musicBtn.classList.add('playing');
+        musicIcon.innerHTML = iconPlay;
+      }).catch(() => {});
+    } else {
+      bgMusic.pause();
+      musicBtn.classList.remove('playing');
+      musicIcon.innerHTML = iconPause;
+    }
+  });
+</script>
+
+</body>
+</html>

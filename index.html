@@ -755,11 +755,11 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
+      <li><a onclick="navScrollTo('experience')"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>經歷</a></li>
       <li><a onclick="navScrollTo('about')"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>關於</a></li>
       <li><a onclick="navScrollTo('education')"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>學歷</a></li>
       <li><a onclick="navScrollTo('certs')"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>證照</a></li>
       <li><a onclick="navScrollTo('military')"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>兵役</a></li>
-      <li><a onclick="navScrollTo('experience')"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>經歷</a></li>
       <li><a onclick="navScrollTo('skills')"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>技能</a></li>
     </ul>
   </div>
@@ -786,6 +786,57 @@
 
 <div class="container">
 <main>
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="reveal">
+      <div class="section-label"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Experience</div>
+      <h2 class="section-title">工作經歷</h2>
+    </div>
+    <div class="card tl-card reveal d1">
+      <div class="tl-date">2023.06<br>— 至今</div>
+      <div class="tl-content">
+        <div class="tl-title">超豐電子股份有限公司</div>
+        <div class="tl-sub">倉儲管理師 ・ 半導體製造業 500+ 人 ・ 苗栗竹南</div>
+
+        <div class="metrics-row">
+          <div class="metric">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="metric-value">3 年+</div>
+            <div class="metric-label">倉儲管理經驗</div>
+          </div>
+          <div class="metric">
+            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <div class="metric-value">每日</div>
+            <div class="metric-label">物料進出庫作業</div>
+          </div>
+          <div class="metric">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="metric-value">5+ 單位</div>
+            <div class="metric-label">跨部門協調對象</div>
+          </div>
+        </div>
+
+        <div class="tl-body">
+          <ul>
+            <li>獨立負責每日物料與成品進出庫作業，維持出貨準時率達標，支撐產線不中斷運作</li>
+            <li>作為生管、司機、產線間的溝通樞紐，異常發生時即時回報並追蹤至結案，縮短異常處理反應時間</li>
+            <li>主導季度盤點差異分析，協助降低帳料差異風險；參與 5S 與 SOP 更新，減少現場人為失誤</li>
+          </ul>
+        </div>
+        <div class="tags">
+          <span class="tag">ERP 系統操作</span>
+          <span class="tag">Excel</span>
+          <span class="tag">跨部門溝通</span>
+          <span class="tag">流程優化</span>
+          <span class="tag">盤點分析</span>
+          <span class="tag">5S / SOP</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <section id="about">
     <div class="reveal">
       <div class="section-label"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>About</div>
@@ -959,57 +1010,6 @@
         <div class="military-text">
           <h4>中華民國義務役 ・ 役畢</h4>
           <p>2022.09.21 — 2022.12.31（折抵 11 日）</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="reveal">
-      <div class="section-label"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Experience</div>
-      <h2 class="section-title">工作經歷</h2>
-    </div>
-    <div class="card tl-card reveal d1">
-      <div class="tl-date">2023.06<br>— 至今</div>
-      <div class="tl-content">
-        <div class="tl-title">超豐電子股份有限公司</div>
-        <div class="tl-sub">倉儲管理師 ・ 半導體製造業 500+ 人 ・ 苗栗竹南</div>
-
-        <div class="metrics-row">
-          <div class="metric">
-            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            <div class="metric-value">3 年+</div>
-            <div class="metric-label">倉儲管理經驗</div>
-          </div>
-          <div class="metric">
-            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-            <div class="metric-value">每日</div>
-            <div class="metric-label">物料進出庫作業</div>
-          </div>
-          <div class="metric">
-            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-            <div class="metric-value">5+ 單位</div>
-            <div class="metric-label">跨部門協調對象</div>
-          </div>
-        </div>
-
-        <div class="tl-body">
-          <ul>
-            <li>獨立負責每日物料與成品進出庫作業，維持出貨準時率達標，支撐產線不中斷運作</li>
-            <li>作為生管、司機、產線間的溝通樞紐，異常發生時即時回報並追蹤至結案，縮短異常處理反應時間</li>
-            <li>主導季度盤點差異分析，協助降低帳料差異風險；參與 5S 與 SOP 更新，減少現場人為失誤</li>
-          </ul>
-        </div>
-        <div class="tags">
-          <span class="tag">ERP 系統操作</span>
-          <span class="tag">Excel</span>
-          <span class="tag">跨部門溝通</span>
-          <span class="tag">流程優化</span>
-          <span class="tag">盤點分析</span>
-          <span class="tag">5S / SOP</span>
         </div>
       </div>
     </div>

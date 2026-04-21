@@ -632,6 +632,31 @@
     flex-shrink: 0;
   }
 
+  /* ===== SKILL GROUP ===== */
+  .skill-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 0.75rem 0;
+  }
+  .skill-group:first-child { padding-top: 0; }
+  .skill-group:last-child { padding-bottom: 0; }
+  .skill-group-label {
+    font-family: 'Outfit', sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    width: 52px;
+    flex-shrink: 0;
+    padding-top: 0.45rem;
+  }
+  .skill-group-divider {
+    height: 1px;
+    background: var(--border-light);
+  }
+
   /* ===== FOOTER ===== */
   footer {
     text-align: center;
@@ -755,8 +780,8 @@
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a onclick="navScrollTo('experience')"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>經歷</a></li>
       <li><a onclick="navScrollTo('about')"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>關於</a></li>
+      <li><a onclick="navScrollTo('experience')"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>經歷</a></li>
       <li><a onclick="navScrollTo('education')"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>學歷</a></li>
       <li><a onclick="navScrollTo('certs')"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>證照</a></li>
       <li><a onclick="navScrollTo('military')"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/></svg>兵役</a></li>
@@ -767,7 +792,6 @@
 
 <!-- HERO -->
 <section class="hero">
-  <div class="hero-chip">PORTFOLIO</div>
   <h1 class="hero-name">葉軍佑</h1>
   <div class="hero-name-en">JUN-YOU YE</div>
   <div class="hero-role">倉儲管理師 ｜ 物管 / 資材 / 供應鏈</div>
@@ -786,6 +810,53 @@
 
 <div class="container">
 <main>
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="reveal">
+      <div class="section-label"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>About</div>
+      <h2 class="section-title">關於我</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card reveal d1">
+        <div class="about-icon" style="background: var(--gold-light);">
+          <svg viewBox="0 0 24 24" stroke="var(--gold)"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+        </div>
+        <h3>復原力</h3>
+        <p>面對低潮能快速調整重回正軌，不迴避弱點，主動補強短板</p>
+      </div>
+      <div class="about-card reveal d2">
+        <div class="about-icon" style="background: rgba(27,42,61,0.08);">
+          <svg viewBox="0 0 24 24" stroke="var(--accent)"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        </div>
+        <h3>商業理解力</h3>
+        <p>擅長閱讀理解與邏輯推演，天然偏向理解人與制度如何運作的思維模式</p>
+      </div>
+      <div class="about-card reveal d3">
+        <div class="about-icon" style="background: rgba(76,140,120,0.1);">
+          <svg viewBox="0 0 24 24" stroke="#4C8C78"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>溝通與表達</h3>
+        <p>語言與文字相關領域表現穩定，跨部門資訊傳達與協調是日常強項</p>
+      </div>
+      <div class="about-card reveal d4">
+        <div class="about-icon" style="background: rgba(90,90,160,0.1);">
+          <svg viewBox="0 0 24 24" stroke="#5A5AA0"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <h3>務實執行力</h3>
+        <p>遇到問題直接面對處理，不拖延不逃避，重視把事情實際完成</p>
+      </div>
+      <div class="about-card reveal d1">
+        <div class="about-icon" style="background: rgba(76,140,120,0.1);">
+          <svg viewBox="0 0 24 24" stroke="#4C8C78"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h3>興趣</h3>
+        <p>音樂、機車騎行、命理與形而上學研究、知識型冷知識蒐集</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="reveal">
@@ -831,59 +902,6 @@
           <span class="tag">盤點分析</span>
           <span class="tag">5S / SOP</span>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <section id="about">
-    <div class="reveal">
-      <div class="section-label"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>About</div>
-      <h2 class="section-title">關於我</h2>
-    </div>
-    <div class="about-grid">
-      <div class="about-card reveal d1">
-        <div class="about-icon" style="background: var(--gold-light);">
-          <svg viewBox="0 0 24 24" stroke="var(--gold)"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-        </div>
-        <h3>復原力</h3>
-        <p>面對低潮能快速調整重回正軌，不迴避弱點，主動補強短板</p>
-      </div>
-      <div class="about-card reveal d2">
-        <div class="about-icon" style="background: rgba(27,42,61,0.08);">
-          <svg viewBox="0 0 24 24" stroke="var(--accent)"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-        </div>
-        <h3>商業理解力</h3>
-        <p>擅長閱讀理解與邏輯推演，天然偏向理解人與制度如何運作的思維模式</p>
-      </div>
-      <div class="about-card reveal d3">
-        <div class="about-icon" style="background: rgba(76,140,120,0.1);">
-          <svg viewBox="0 0 24 24" stroke="#4C8C78"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-        </div>
-        <h3>溝通與表達</h3>
-        <p>語言與文字相關領域表現穩定，跨部門資訊傳達與協調是日常強項</p>
-      </div>
-      <div class="about-card reveal d4">
-        <div class="about-icon" style="background: rgba(160,90,60,0.1);">
-          <svg viewBox="0 0 24 24" stroke="#A05A3C"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg>
-        </div>
-        <h3>審美直覺</h3>
-        <p>對視覺品質和呈現方式有自己的標準，偏好有秩序感的設計與產出</p>
-      </div>
-      <div class="about-card reveal d1">
-        <div class="about-icon" style="background: rgba(90,90,160,0.1);">
-          <svg viewBox="0 0 24 24" stroke="#5A5AA0"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h3>務實執行力</h3>
-        <p>遇到問題直接面對處理，不拖延不逃避，重視把事情實際完成</p>
-      </div>
-      <div class="about-card reveal d2">
-        <div class="about-icon" style="background: rgba(76,140,120,0.1);">
-          <svg viewBox="0 0 24 24" stroke="#4C8C78"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        </div>
-        <h3>興趣</h3>
-        <p>音樂、機車騎行、命理與形而上學研究、知識型冷知識蒐集</p>
       </div>
     </div>
   </section>
@@ -1023,32 +1041,35 @@
       <div class="section-label"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Skills</div>
       <h2 class="section-title">技能 & 學習中</h2>
     </div>
-    <div class="card reveal d1" style="margin-bottom: 0.8rem;">
-      <div style="font-size: 0.84rem; font-weight: 500; color: var(--text-3); letter-spacing: 0.1em; margin-bottom: 0.8rem;">軟實力</div>
-      <div class="skills-row">
-        <span class="skill-chip current"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>復原力與抗壓性</span>
-        <span class="skill-chip current"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>商業理解與邏輯推演</span>
-        <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>跨部門溝通協調</span>
-        <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>審美與品質意識</span>
-        <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>務實問題解決</span>
+    <div class="card reveal d1">
+      <div class="skill-group">
+        <div class="skill-group-label">軟實力</div>
+        <div class="skills-row">
+          <span class="skill-chip current"><svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>復原力與抗壓性</span>
+          <span class="skill-chip current"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>商業理解與邏輯推演</span>
+          <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>跨部門溝通協調</span>
+          <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>務實問題解決</span>
+        </div>
       </div>
-    </div>
-    <div class="card reveal d2" style="margin-bottom: 0.8rem;">
-      <div style="font-size: 0.84rem; font-weight: 500; color: var(--text-3); letter-spacing: 0.1em; margin-bottom: 0.8rem;">硬技能</div>
-      <div class="skills-row">
-        <span class="skill-chip current"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>ERP 系統操作</span>
-        <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Excel</span>
-        <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>倉儲管理</span>
-        <span class="skill-chip current"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>5S / SOP</span>
+      <div class="skill-group-divider"></div>
+      <div class="skill-group">
+        <div class="skill-group-label">硬技能</div>
+        <div class="skills-row">
+          <span class="skill-chip current"><svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>ERP 系統操作</span>
+          <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Excel</span>
+          <span class="skill-chip current"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>倉儲管理</span>
+          <span class="skill-chip current"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>5S / SOP</span>
+        </div>
       </div>
-    </div>
-    <div class="card reveal d3">
-      <div style="font-size: 0.84rem; font-weight: 500; color: var(--text-3); letter-spacing: 0.1em; margin-bottom: 0.8rem;">學習中</div>
-      <div class="skills-row">
-        <span class="skill-chip learning"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>SQL</span>
-        <span class="skill-chip learning"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Power BI</span>
-        <span class="skill-chip learning"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Excel 進階分析</span>
-        <span class="skill-chip learning"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Google Data Analytics</span>
+      <div class="skill-group-divider"></div>
+      <div class="skill-group">
+        <div class="skill-group-label">學習中</div>
+        <div class="skills-row">
+          <span class="skill-chip learning"><svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>SQL</span>
+          <span class="skill-chip learning"><svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>Power BI</span>
+          <span class="skill-chip learning"><svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>Excel 進階分析</span>
+          <span class="skill-chip learning"><svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>Google Data Analytics</span>
+        </div>
       </div>
     </div>
   </section>

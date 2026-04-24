@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Jun-You Ye — Warehouse Management Specialist with 3+ years in semiconductor manufacturing.">
-<title>Jun-You Ye — About</title>
+<meta name="description" content="Jun-You Ye — Work Experience">
+<title>Jun-You Ye — Experience</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -31,9 +31,9 @@
   .nav-links a svg { width: 13px; height: 13px; stroke: currentColor; fill: none; stroke-width: 1.5; }
   .nav-links a:hover, .nav-links a.active { color: var(--accent); background: var(--gold-light); }
 
-  .hero { padding: 6.5rem 1.5rem 3rem; text-align: center; position: relative; }
-  .hero::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 600px; height: 600px; background: radial-gradient(ellipse at center, rgba(198,153,90,0.06) 0%, transparent 65%); pointer-events: none; }
-  .hero-name { font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 400; color: var(--text-1); line-height: 1.1; opacity: 0; animation: fadeUp 0.7s var(--transition) 0.2s forwards; }
+  .page-header { padding: 5.5rem 1.5rem 2.5rem; text-align: center; position: relative; }
+  .page-header::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 600px; height: 400px; background: radial-gradient(ellipse at center, rgba(198,153,90,0.06) 0%, transparent 65%); pointer-events: none; }
+  .page-header-title { font-family: 'Playfair Display', serif; font-size: 2.8rem; font-weight: 400; color: var(--text-1); opacity: 0; animation: fadeUp 0.7s var(--transition) 0.2s forwards; }
 
   .cta-primary { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.55rem 1.3rem; background: var(--accent); color: #fff; border-radius: 100px; text-decoration: none; font-size: 0.88rem; font-weight: 500; letter-spacing: 0.03em; transition: all 0.35s var(--transition); }
   .cta-primary:hover { background: var(--accent-soft); box-shadow: var(--shadow-md); transform: translateY(-1px); }
@@ -46,16 +46,25 @@
   .section-label::before { content: ''; width: 16px; height: 1.5px; background: var(--gold); }
   .section-title { font-family: 'Playfair Display', serif; font-size: 1.75rem; font-weight: 400; color: var(--text-1); margin-bottom: 1.8rem; }
 
-  .hero-name-en { font-family: 'Outfit', sans-serif; font-size: 0.95rem; font-weight: 300; color: var(--text-3); letter-spacing: 0.2em; margin-bottom: 1.2rem; }
-  .hero-role { font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 500; color: var(--accent); letter-spacing: 0.06em; margin-bottom: 0.8rem; }
+  .card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; transition: all 0.4s var(--transition); }
+  .card:hover { box-shadow: var(--shadow-hover); border-color: var(--border-light); transform: translateY(-2px); }
+  .tl-card { display: grid; grid-template-columns: 100px 1fr; gap: 1.2rem; align-items: start; }
+  .tl-date { font-family: 'Outfit', sans-serif; font-size: 0.78rem; font-weight: 500; color: var(--text-3); letter-spacing: 0.04em; padding-top: 0.25rem; line-height: 1.5; }
+  .tl-title { font-size: 1.08rem; font-weight: 500; color: var(--text-1); margin-bottom: 0.1rem; }
+  .tl-sub { font-size: 0.88rem; color: var(--text-3); margin-bottom: 0.5rem; }
+  .tl-body { font-size: 0.88rem; color: var(--text-2); line-height: 1.75; }
+  .tl-body li { list-style: none; padding-left: 0.9rem; position: relative; margin-bottom: 0.15rem; }
+  .tl-body li::before { content: ''; position: absolute; left: 0; top: 0.6em; width: 4px; height: 4px; border-radius: 50%; background: var(--gold); }
 
-  .about-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0.8rem; }
-  .about-card { background: var(--bg-elevated); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.3rem; transition: all 0.4s var(--transition); }
-  .about-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-2px); }
-  .about-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 0.8rem; }
-  .about-icon svg { width: 18px; height: 18px; stroke-width: 1.5; fill: none; }
-  .about-card h3 { font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.08em; color: var(--text-1); margin-bottom: 0.3rem; }
-  .about-card p { font-size: 0.88rem; color: var(--text-2); line-height: 1.6; font-weight: 300; }
+  .metrics-row { display: flex; gap: 0.5rem; margin: 0.8rem 0; }
+  .metric { flex: 1; background: var(--bg-subtle); border-radius: var(--radius-sm); padding: 0.65rem 0.8rem; text-align: center; }
+  .metric svg { width: 16px; height: 16px; stroke: var(--gold); fill: none; stroke-width: 1.5; margin-bottom: 0.3rem; }
+  .metric-value { font-family: 'Outfit', sans-serif; font-size: 1.05rem; font-weight: 600; color: var(--accent); line-height: 1.2; }
+  .metric-label { font-size: 0.74rem; color: var(--text-3); font-weight: 400; margin-top: 0.15rem; letter-spacing: 0.02em; }
+
+  .tags { display: flex; gap: 0.35rem; flex-wrap: wrap; margin-top: 0.5rem; }
+  .tag { font-size: 0.76rem; padding: 0.2rem 0.6rem; background: var(--bg-subtle); color: var(--text-3); border-radius: 100px; font-weight: 400; display: inline-flex; align-items: center; gap: 0.25rem; }
+  .tag::before { content: ''; width: 5px; height: 5px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
 
   footer { text-align: center; padding: 2rem 1.5rem 2.5rem; }
   .footer-line { width: 24px; height: 1.5px; background: var(--gold); margin: 0 auto 0.8rem; }
@@ -65,12 +74,9 @@
   @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
   .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.65s var(--transition), transform 0.65s var(--transition); }
   .reveal.visible { opacity: 1; transform: translateY(0); }
-  .reveal.d1 { transition-delay: 0.06s; } .reveal.d2 { transition-delay: 0.12s; }
-  .reveal.d3 { transition-delay: 0.18s; } .reveal.d4 { transition-delay: 0.24s; }
+  .reveal.d1 { transition-delay: 0.06s; }
 
-  @media (max-width: 760px) { .about-grid { grid-template-columns: 1fr 1fr; } }
-  @media (max-width: 640px) { .hero-name { font-size: 2.5rem; } .section-title { font-size: 1.45rem; } .about-grid { grid-template-columns: 1fr; } .nav-links a { font-size: 0.78rem; padding: 0.3rem 0.5rem; } }
-
+  @media (max-width: 640px) { .page-header-title { font-size: 2.2rem; } .tl-card { grid-template-columns: 1fr; gap: 0.2rem; } .metrics-row { flex-direction: column; } .nav-links a { font-size: 0.78rem; padding: 0.3rem 0.5rem; } }
   .hamburger { display: none; cursor: pointer; background: none; border: none; padding: 0.5rem; min-width: 40px; min-height: 40px; align-items: center; justify-content: center; flex-direction: column; }
   .hamburger span { display: block; width: 22px; height: 2.5px; background: var(--text-1); margin: 3px 0; border-radius: 2px; transition: 0.3s; }
   @media (max-width: 480px) {
@@ -78,7 +84,7 @@
     .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 52px; left: 0; width: 100%; background: var(--bg-elevated); backdrop-filter: blur(20px); padding: 1rem 1.5rem; gap: 0.3rem; border-bottom: 1px solid var(--border-light); box-shadow: var(--shadow-md); z-index: 100; }
     .hamburger { display: flex; }
   }
-  @media print { nav, footer, .hamburger { display: none; } .reveal { opacity: 1 !important; transform: none !important; } body { background: #fff; } .about-grid { grid-template-columns: 1fr 1fr 1fr; } }
+  @media print { nav, footer, .hamburger { display: none; } .reveal { opacity: 1 !important; transform: none !important; } body { background: #fff; } }
 </style>
 </head>
 <body>
@@ -100,56 +106,54 @@
   </div>
 </nav>
 
-<section class="hero">
-  <h1 class="hero-name">JUN-YOU YE</h1>
-</section>
+<div class="page-header">
+  <h1 class="page-header-title">Experience</h1>
+</div>
 
 <div class="container">
 <main>
-  <section id="about">
+  <section>
     <div class="reveal">
-      <div class="section-label"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>About</div>
-      <h2 class="section-title">About Me</h2>
-      <div style="margin-bottom: 1.8rem;">
-        <div class="hero-name-en">JUN-YOU YE</div>
-        <div class="hero-role">倉儲管理師 ｜ 物管 / 資材 / 供應鏈</div>
-      </div>
+      <div class="section-label"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Work History</div>
+      <h2 class="section-title">Experience</h2>
     </div>
-    <div class="about-grid">
-      <div class="about-card reveal d1">
-        <div class="about-icon" style="background: var(--gold-light);">
-          <svg viewBox="0 0 24 24" stroke="var(--gold)"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+    <div class="card tl-card reveal d1">
+      <div class="tl-date">2023.06<br>— 至今</div>
+      <div class="tl-content">
+        <div class="tl-title">超豐電子股份有限公司</div>
+        <div class="tl-sub">倉儲管理師 ・ 半導體製造業 500+ 人 ・ 苗栗竹南</div>
+        <div class="metrics-row">
+          <div class="metric">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <div class="metric-value">3 年+</div>
+            <div class="metric-label">倉儲管理經驗</div>
+          </div>
+          <div class="metric">
+            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+            <div class="metric-value">每日</div>
+            <div class="metric-label">物料進出庫作業</div>
+          </div>
+          <div class="metric">
+            <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div class="metric-value">5+ 單位</div>
+            <div class="metric-label">跨部門協調對象</div>
+          </div>
         </div>
-        <h3>復原力</h3>
-        <p>面對低潮能快速調整重回正軌，不迴避弱點，主動補強短板</p>
-      </div>
-      <div class="about-card reveal d2">
-        <div class="about-icon" style="background: rgba(27,42,61,0.08);">
-          <svg viewBox="0 0 24 24" stroke="var(--accent)"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <div class="tl-body">
+          <ul>
+            <li>獨立負責每日物料與成品進出庫作業，維持出貨準時率達標，支撐產線不中斷運作</li>
+            <li>作為生管、司機、產線間的溝通樞紐，異常發生時即時回報並追蹤至結案，縮短異常處理反應時間</li>
+            <li>主導季度盤點差異分析，協助降低帳料差異風險；參與 5S 與 SOP 更新，減少現場人為失誤</li>
+          </ul>
         </div>
-        <h3>商業理解力</h3>
-        <p>擅長閱讀理解與邏輯推演，天然偏向理解人與制度如何運作的思維模式</p>
-      </div>
-      <div class="about-card reveal d3">
-        <div class="about-icon" style="background: rgba(76,140,120,0.1);">
-          <svg viewBox="0 0 24 24" stroke="#4C8C78"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <div class="tags">
+          <span class="tag">ERP 系統操作</span>
+          <span class="tag">Excel</span>
+          <span class="tag">跨部門溝通</span>
+          <span class="tag">流程優化</span>
+          <span class="tag">盤點分析</span>
+          <span class="tag">5S / SOP</span>
         </div>
-        <h3>溝通與表達</h3>
-        <p>語言與文字相關領域表現穩定，跨部門資訊傳達與協調是日常強項</p>
-      </div>
-      <div class="about-card reveal d4">
-        <div class="about-icon" style="background: rgba(90,90,160,0.1);">
-          <svg viewBox="0 0 24 24" stroke="#5A5AA0"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-        </div>
-        <h3>務實執行力</h3>
-        <p>遇到問題直接面對處理，不拖延不逃避，重視把事情實際完成</p>
-      </div>
-      <div class="about-card reveal d1">
-        <div class="about-icon" style="background: rgba(76,140,120,0.1);">
-          <svg viewBox="0 0 24 24" stroke="#4C8C78"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
-        </div>
-        <h3>興趣</h3>
-        <p>音樂、機車騎行、命理與形而上學研究、知識型冷知識蒐集</p>
       </div>
     </div>
   </section>

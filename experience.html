@@ -3,240 +3,151 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jun-You Ye — Work Experience">
-  <title>Jun-You Ye — Experience</title>
+  <meta name="description" content="葉軍佑 Jun-You Ye — Battlefield & Path. 主戰場與發展路線。">
+  <title>葉軍佑 — Battlefield</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Card & Timeline */
-    .card {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: all 0.4s var(--transition);
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-hover);
-      border-color: var(--border-light);
-      transform: translateY(-2px);
-    }
-
-    .tl-card {
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 1.2rem;
-      align-items: start;
-    }
-
-    .tl-date {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--text-3);
-      letter-spacing: 0.04em;
-      padding-top: 0.25rem;
-      line-height: 1.5;
-    }
-
-    .tl-title {
-      font-size: 1.08rem;
-      font-weight: 500;
-      color: var(--text-1);
-      margin-bottom: 0.1rem;
-    }
-
-    .tl-sub {
-      font-size: 0.88rem;
-      color: var(--text-3);
-      margin-bottom: 0.5rem;
-    }
-
-    .tl-body {
-      font-size: 0.88rem;
-      color: var(--text-2);
-      line-height: 1.75;
-    }
-
-    .tl-body li {
-      list-style: none;
-      padding-left: 0.9rem;
-      position: relative;
-      margin-bottom: 0.15rem;
-    }
-
-    .tl-body li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.6em;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--gold);
-    }
-
-    /* Metrics */
-    .metrics-row {
-      display: flex;
-      gap: 0.5rem;
-      margin: 0.8rem 0;
-    }
-
-    .metric {
-      flex: 1;
-      background: var(--bg-subtle);
-      border-radius: var(--radius-sm);
-      padding: 0.65rem 0.8rem;
-      text-align: center;
-    }
-
-    .metric svg {
-      width: 16px;
-      height: 16px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 1.5;
-      margin-bottom: 0.3rem;
-    }
-
-    .metric-value {
-      font-family: 'Outfit', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 600;
-      color: var(--accent);
-      line-height: 1.2;
-    }
-
-    .metric-label {
-      font-size: 0.74rem;
-      color: var(--text-3);
-      font-weight: 400;
-      margin-top: 0.15rem;
-      letter-spacing: 0.02em;
-    }
-
-    /* Tags */
-    .tags {
-      display: flex;
-      gap: 0.35rem;
-      flex-wrap: wrap;
-      margin-top: 0.5rem;
-    }
-
-    .tag {
-      font-size: 0.76rem;
-      padding: 0.2rem 0.6rem;
-      background: var(--bg-subtle);
-      color: var(--text-3);
-      border-radius: 100px;
-      font-weight: 400;
-      display: inline-flex;
-      align-items: center;
-      gap: 0.25rem;
-    }
-
-    .tag::before {
-      content: '';
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--gold);
-      flex-shrink: 0;
-    }
-
-    @media (max-width: 640px) {
-      .tl-card { grid-template-columns: 1fr; gap: 0.2rem; }
-      .metrics-row { flex-direction: column; }
-    }
-  </style>
 </head>
 <body>
 
 <nav id="nav" aria-label="Navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">JY</a>
+    <a href="index.html" class="nav-logo">JY · 02</a>
     <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>About</a></li>
-      <li><a href="experience.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Experience</a></li>
-      <li><a href="education.html"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>Education</a></li>
-      <li><a href="certs.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>Certifications</a></li>
-      <li><a href="skills.html"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Skills</a></li>
+      <li><a href="index.html">Identity</a></li>
+      <li><a href="experience.html">Battlefield</a></li>
+      <li><a href="skills.html">Skill Tree</a></li>
+      <li><a href="education.html">Quests</a></li>
+      <li><a href="certs.html">Stats</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="page-header">
-  <h1 class="page-header-title">Experience</h1>
-</div>
+<header class="guide-hero">
+  <div class="guide-hero-frame reveal">
+    <div class="frame-corners"></div>
+    <div class="guide-meta-row">
+      <div class="meta-l"><span>Chapter II</span><span>Status · Active</span></div>
+      <div class="meta-r"><span>Section · Battlefield</span></div>
+    </div>
+    <div class="guide-eyebrow">Battlefield Report</div>
+    <h1 class="guide-name" style="font-size:3rem;">主戰場 · 倉儲現場</h1>
+    <div class="guide-name-en">Battlefield · Warehouse Operations</div>
+    <p class="guide-tagline">
+      真正的<strong>後勤者</strong>不是搬貨的人，是把<strong>混亂整理成秩序</strong>的人。<br>
+      這個版本的戰場：半導體製造業現場，每日進出貨流程。
+    </p>
+  </div>
+</header>
 
 <div class="container">
   <main>
+
+    <!-- ===== PART II — BATTLEFIELD & SKILLS ===== -->
     <section>
-      <div class="reveal">
-        <div class="section-label">
-          <svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>
-          <h2>Work History</h2>
-        </div>
+      <div class="part-header reveal">
+        <span class="part-label">Part II</span>
+        <span class="part-tag"><span class="zh">主戰場與技能</span> Battlefield &amp; Skills</span>
+        <span class="part-line"></span>
       </div>
-      <div class="card tl-card reveal d1">
-        <div class="tl-date">2023.06<br>— 至今</div>
-        <div class="tl-content">
-          <div class="tl-title">超豐電子股份有限公司</div>
-          <div class="tl-sub">倉儲管理師 ・ 半導體製造業 500+ 人 ・ 苗栗竹南</div>
-          <div class="metrics-row">
-            <div class="metric">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-              <div class="metric-value">3 年+</div>
-              <div class="metric-label">倉儲管理經驗</div>
-            </div>
-            <div class="metric">
-              <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-              <div class="metric-value">每日</div>
-              <div class="metric-label">成品與物料進出庫作業</div>
-            </div>
-            <div class="metric">
-              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              <div class="metric-value">3+ 單位</div>
-              <div class="metric-label">跨部門協調對象</div>
-            </div>
+
+      <div class="card-grid">
+
+        <!-- # 004 BATTLEFIELD -->
+        <article class="guide-card reveal d1">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>004  ten</span>
+            <span class="card-tag battlefield">Battlefield</span>
           </div>
-          <div class="tl-body">
-            <ul>
-              <li>獨立負責每日物料與成品進出庫作業，維持出貨準時率達標，支撐產線不中斷運作</li>
-              <li>作為生管、司機、產線間的溝通樞紐，即時回報並追蹤異常，縮短異常處理反應時間</li>
-              <li>主導季度盤點差異分析，協助降低帳料差異風險；參與 5S 與 SOP 更新，減少現場人為失誤</li>
+          <h2 class="card-title">超豐電子 · 倉儲現場</h2>
+          <div class="card-subtitle">Primary Battle Zone · 2023.06 — Now</div>
+          <div class="card-body">
+            <p>半導體製造業 500+ 人 · 苗栗竹南 · 倉儲管理師。</p>
+            <p>真正的倉管不是體力勞動，而是遇到事情時<span class="hl">不慌亂</span>──知道資料在哪、流程怎麼走、文件怎麼準備、風險在哪。</p>
+            <ul class="card-list">
+              <li><span class="marker">日常</span>每日物料與成品進出庫，維持出貨準時率，撐住產線運作</li>
+              <li><span class="marker">樞紐</span>生管 / 司機 / 產線間的溝通中心，即時回報追蹤異常</li>
+              <li><span class="marker">優化</span>主導季度盤點差異分析；參與 5S 與 SOP 更新</li>
+            </ul>
+            <div class="card-quote">主軸：文件整理 · 流程銜接 · 異常追蹤 · 現場制度化。</div>
+          </div>
+        </article>
+
+        <!-- # 005 SKILL TREE / PATH -->
+        <article class="guide-card reveal d2">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>005  ten</span>
+            <span class="card-tag skill-tree">Skill Tree</span>
+          </div>
+          <h2 class="card-title">三系發展路線判斷</h2>
+          <div class="card-subtitle">Path Priority · Combined Build</div>
+          <div class="card-body" style="padding-top:0.4rem;">
+            <div class="tier-row">
+              <div class="tier-badge s">S</div>
+              <div class="tier-content">
+                <div class="tier-name">流程整合 × 系統設計</div>
+                <div class="tier-desc">把混亂變秩序的核心能力 — 提供深度與長期值</div>
+              </div>
+            </div>
+            <div class="tier-row">
+              <div class="tier-badge a">A</div>
+              <div class="tier-content">
+                <div class="tier-name">資料判讀 × 異常追蹤</div>
+                <div class="tier-desc">內容形式：盤點分析、ERP 操作、現場數據解讀</div>
+              </div>
+            </div>
+            <div class="tier-row">
+              <div class="tier-badge b">B</div>
+              <div class="tier-content">
+                <div class="tier-name">跨部門溝通 × 文件處理</div>
+                <div class="tier-desc">使用工具：Excel / Word / 報表 / 標準流程</div>
+              </div>
+            </div>
+            <div class="card-quote" style="margin-top:0.85rem;">推薦組合：三系合一，不是三選一。</div>
+          </div>
+        </article>
+
+        <!-- # 006 CONTENT × 5 — Five capabilities forged -->
+        <article class="guide-card reveal d3">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>006  ten</span>
+            <span class="card-tag content">Content × 5</span>
+          </div>
+          <h2 class="card-title">現場煉成的五項能力</h2>
+          <div class="card-subtitle">Five Capabilities · Forged on Site</div>
+          <div class="card-body">
+            <ul class="card-list">
+              <li><span class="marker">01</span><span class="hl-cyan">流程文件化</span>　SOP 撰寫、5S 更新、現場流程梳理</li>
+              <li><span class="marker">02</span><span class="hl-cyan">異常處理</span>　即時判讀、追蹤、回報，縮短反應時間</li>
+              <li><span class="marker">03</span><span class="hl-cyan">盤點與差異分析</span>　每季差異追溯，降低帳料風險</li>
+              <li><span class="marker">04</span><span class="hl-cyan">跨部門協調</span>　生管 / 司機 / 產線串接，風險前置處理</li>
+              <li><span class="marker">05</span><span class="hl-cyan">資料化思維</span>　Excel 表單規劃、ERP 操作、決策資料整理</li>
             </ul>
           </div>
-          <div class="tags">
-            <span class="tag">ERP 系統操作</span>
-            <span class="tag">Excel</span>
-            <span class="tag">跨部門溝通</span>
-            <span class="tag">流程優化</span>
-            <span class="tag">盤點分析</span>
-            <span class="tag">5S / SOP</span>
-          </div>
-        </div>
+        </article>
+
       </div>
     </section>
+
   </main>
 </div>
 
 <footer>
-  <div class="footer-line"></div>
-  <a class="cta-primary" href="mailto:jun-you.ye@outlook.com" style="margin: 0.8rem auto; display: inline-flex;">
-    <svg viewBox="0 0 24 24" role="img" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.5;">
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-      <polyline points="22,6 12,13 2,6"/>
-    </svg>
-    Contact
-  </a>
-  <div class="footer-copy">© 2026 — Built with purpose.</div>
+  <div class="footer-row">
+    <span>© 2026 · Personal Strategy Guide · 葉軍佑</span>
+    <a class="footer-contact" href="mailto:jun-you.ye@outlook.com">
+      <svg viewBox="0 0 24 24" role="img"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Contact
+    </a>
+    <span>Save Loaded · 2026.05.01</span>
+  </div>
 </footer>
 
 <script src="script.js"></script>

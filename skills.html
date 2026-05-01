@@ -3,216 +3,190 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jun-You Ye — Skills">
-  <title>Jun-You Ye — Skills</title>
+  <meta name="description" content="葉軍佑 Jun-You Ye — Skill Tree. 技能樹與屬性配置。">
+  <title>葉軍佑 — Skill Tree</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Card */
-    .card {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: all 0.4s var(--transition);
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-hover);
-      border-color: var(--border-light);
-      transform: translateY(-2px);
-    }
-
-    /* Skills */
-    .skills-row {
-      display: flex;
-      gap: 0.6rem;
-      flex-wrap: wrap;
-    }
-
-    .skill-chip {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      padding: 0.45rem 0.9rem;
-      border-radius: 100px;
-      font-size: 0.84rem;
-      font-weight: 400;
-      transition: all 0.3s var(--transition);
-    }
-
-    .skill-chip svg {
-      width: 13px;
-      height: 13px;
-      stroke: currentColor;
-      fill: none;
-      stroke-width: 1.5;
-      flex-shrink: 0;
-    }
-
-    .skill-chip.current {
-      background: var(--accent);
-      color: #fff;
-      border: 1px solid var(--accent);
-    }
-
-    .skill-chip.learning {
-      background: var(--bg-elevated);
-      color: var(--text-2);
-      border: 1px solid var(--border);
-    }
-
-    .skill-chip.learning::before {
-      content: '';
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      background: var(--gold);
-      animation: pulse 2s ease infinite;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.4; }
-      50%       { opacity: 1; }
-    }
-
-    /* Skill Groups */
-    .skill-group {
-      display: flex;
-      align-items: flex-start;
-      gap: 1rem;
-      padding: 0.75rem 0;
-    }
-
-    .skill-group:first-child { padding-top: 0; }
-    .skill-group:last-child  { padding-bottom: 0; }
-
-    .skill-group-label {
-      font-family: 'Noto Sans TC', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      color: var(--text-3);
-      width: 52px;
-      flex-shrink: 0;
-      padding-top: 0.45rem;
-    }
-
-    .skill-group-divider {
-      height: 1px;
-      background: var(--border-light);
-    }
-
-    @media (max-width: 640px) {
-      .skills-row { justify-content: center; }
-    }
-
-    @media print {
-      .skill-chip.learning::before { animation: none; }
-    }
-  </style>
 </head>
 <body>
 
 <nav id="nav" aria-label="Navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">JY</a>
+    <a href="index.html" class="nav-logo">JY · 02</a>
     <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>About</a></li>
-      <li><a href="experience.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Experience</a></li>
-      <li><a href="education.html"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>Education</a></li>
-      <li><a href="certs.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>Certifications</a></li>
-      <li><a href="skills.html"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Skills</a></li>
+      <li><a href="index.html">Identity</a></li>
+      <li><a href="experience.html">Battlefield</a></li>
+      <li><a href="skills.html">Skill Tree</a></li>
+      <li><a href="education.html">Quests</a></li>
+      <li><a href="certs.html">Stats</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="page-header">
-  <h1 class="page-header-title">Skills</h1>
-</div>
+<header class="guide-hero">
+  <div class="guide-hero-frame reveal">
+    <div class="frame-corners"></div>
+    <div class="guide-meta-row">
+      <div class="meta-l"><span>Chapter III · A</span><span>Build · Hybrid</span></div>
+      <div class="meta-r"><span>Section · Skill Tree</span></div>
+    </div>
+    <div class="guide-eyebrow">Skill Tree &amp; Status</div>
+    <h1 class="guide-name" style="font-size:3rem;">技能樹 · 屬性配置</h1>
+    <div class="guide-name-en">Capabilities · Build Sheet</div>
+    <p class="guide-tagline">
+      不要做純 Word／Excel 老師，市場競爭太大。<br>
+      真正的版本配點：把 <strong>文件</strong>、<strong>資料</strong>、<strong>流程</strong>整合成一個<strong>系統</strong>。
+    </p>
+  </div>
+</header>
 
 <div class="container">
   <main>
+
+    <!-- ===== PART II.B — SKILL TREE ===== -->
     <section>
-      <div class="reveal">
-        <div class="section-label">
-          <svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-          <h2>Capabilities</h2>
-        </div>
+      <div class="part-header reveal">
+        <span class="part-label">Part II</span>
+        <span class="part-tag"><span class="zh">技能樹判讀</span> Skill Tree · Tier List</span>
+        <span class="part-line"></span>
       </div>
-      <div class="card reveal d1">
-        <div class="skill-group">
-          <div class="skill-group-label">軟實力</div>
-          <div class="skills-row">
-            <span class="skill-chip current">
-              <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
-              問題拆解與流程優化
-            </span>
-            <span class="skill-chip current">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-              數據導向思維
-            </span>
-            <span class="skill-chip current">
-              <svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-              高穩定度執行力
-            </span>
+
+      <div class="card-grid two">
+
+        <!-- Tier list card -->
+        <article class="guide-card reveal d1">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>007  ten</span>
+            <span class="card-tag skill-tree">Skill Tree</span>
           </div>
-        </div>
-        <div class="skill-group-divider"></div>
-        <div class="skill-group">
-          <div class="skill-group-label">硬技能</div>
-          <div class="skills-row">
-            <span class="skill-chip current">
-              <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-              ERP系統操作
-            </span>
-            <span class="skill-chip current">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-              資料提取與分析
-            </span>
-            <span class="skill-chip current">
-              <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-              倉儲管理實務
-            </span>
+          <h2 class="card-title">三系發展路線判斷</h2>
+          <div class="card-subtitle">Path Priority · Combined Build</div>
+          <div class="card-body" style="padding-top:0.4rem;">
+            <div class="tier-row">
+              <div class="tier-badge s">S</div>
+              <div class="tier-content">
+                <div class="tier-name">流程整合 × 系統設計</div>
+                <div class="tier-desc">把混亂變秩序 — 倉儲 SOP、5S、流程圖、文件架構</div>
+              </div>
+            </div>
+            <div class="tier-row">
+              <div class="tier-badge a">A</div>
+              <div class="tier-content">
+                <div class="tier-name">資料判讀 × 異常追蹤</div>
+                <div class="tier-desc">Excel 表單設計 / ERP 操作 / 盤點差異分析</div>
+              </div>
+            </div>
+            <div class="tier-row">
+              <div class="tier-badge b">B</div>
+              <div class="tier-content">
+                <div class="tier-name">跨部門溝通 × 文件處理</div>
+                <div class="tier-desc">會議紀錄、報表、文書、現場協調</div>
+              </div>
+            </div>
+            <div class="card-quote" style="margin-top:0.85rem;">配點原則：S × A × B 三系合一，不是三選一。</div>
           </div>
-        </div>
-        <div class="skill-group-divider"></div>
-        <div class="skill-group">
-          <div class="skill-group-label">學習中</div>
-          <div class="skills-row">
-            <span class="skill-chip learning">
-              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-              Power BI
-            </span>
-            <span class="skill-chip learning">
-              <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-              Excel進階自動化
-            </span>
-            <span class="skill-chip learning">
-              <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-              流程優化與數據化管理
-            </span>
+        </article>
+
+        <!-- Status / 屬性提醒 -->
+        <article class="guide-card reveal d2">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>008  ten</span>
+            <span class="card-tag status">Status Effect</span>
           </div>
-        </div>
+          <h2 class="card-title">屬性提醒：四維平衡</h2>
+          <div class="card-subtitle">Buff &amp; Debuff Watchlist</div>
+          <div class="card-body" style="padding-top:0.4rem;">
+            <div class="stat-line">
+              <div class="stat-icon">事</div>
+              <div>
+                <div class="stat-label-zh">事業 <span class="en">Career</span></div>
+                <p>不要只做能做的事，要做能<span class="hl">記住你的事</span>。文書、資料、會計，流程都是材料，必須組成明確產出。</p>
+              </div>
+            </div>
+            <div class="stat-line">
+              <div class="stat-icon">金</div>
+              <div>
+                <div class="stat-label-zh">金錢 <span class="en">Gold</span></div>
+                <p>穩定收入是地基，少花錢買裝備／廣告，多花資內容組裝、表達能力、報告與輸出節奏。</p>
+              </div>
+            </div>
+            <div class="stat-line">
+              <div class="stat-icon">人</div>
+              <div>
+                <div class="stat-label-zh">人脈 <span class="en">Link</span></div>
+                <p>別急一直配合別人，練習更早說清楚邊界。好的關係不是討好，是雙方都知道彼此的尊重與限制。</p>
+              </div>
+            </div>
+            <div class="stat-line">
+              <div class="stat-icon">心</div>
+              <div>
+                <div class="stat-label-zh">身心 <span class="en">HP / MP</span></div>
+                <p>小心過度緊繃與系統超載。你不是一次完美的角色，是<span class="hl">透過版本更新慢慢變強</span>的角色。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
       </div>
+
+      <!-- Capabilities chips — current vs learning -->
+      <div class="card-grid one" style="margin-top:1.1rem;">
+        <article class="guide-card reveal d3">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>009  ten</span>
+            <span class="card-tag daily">Equipped</span>
+          </div>
+          <h2 class="card-title">已裝備技能 / 學習中技能</h2>
+          <div class="card-subtitle">Equipped &amp; Training</div>
+          <div class="card-body" style="padding-top:0.4rem;">
+
+            <div class="tier-row">
+              <div class="tier-badge s">軟</div>
+              <div class="tier-content">
+                <div class="tier-name">問題拆解 · 流程優化 · 資料思維 · 高穩定度執行力</div>
+                <div class="tier-desc">後發型角色的核心 ── 越磨越亮的整合力</div>
+              </div>
+            </div>
+            <div class="tier-row">
+              <div class="tier-badge a">硬</div>
+              <div class="tier-content">
+                <div class="tier-name">ERP 系統操作 · 資料提取與分析 · 倉儲管理實務 · Excel</div>
+                <div class="tier-desc">三年現場累積的硬技能基底</div>
+              </div>
+            </div>
+            <div class="tier-row">
+              <div class="tier-badge b">學</div>
+              <div class="tier-content">
+                <div class="tier-name">Power BI · Excel 進階自動化 · 流程數據化管理</div>
+                <div class="tier-desc">學習中 ── 從操作者升級為設計者</div>
+              </div>
+            </div>
+
+          </div>
+        </article>
+      </div>
+
     </section>
+
   </main>
 </div>
 
 <footer>
-  <div class="footer-line"></div>
-  <a class="cta-primary" href="mailto:jun-you.ye@outlook.com" style="margin: 0.8rem auto; display: inline-flex;">
-    <svg viewBox="0 0 24 24" role="img" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.5;">
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-      <polyline points="22,6 12,13 2,6"/>
-    </svg>
-    Contact
-  </a>
-  <div class="footer-copy">© 2026 — Built with purpose.</div>
+  <div class="footer-row">
+    <span>© 2026 · Personal Strategy Guide · 葉軍佑</span>
+    <a class="footer-contact" href="mailto:jun-you.ye@outlook.com">
+      <svg viewBox="0 0 24 24" role="img"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Contact
+    </a>
+    <span>Save Loaded · 2026.05.01</span>
+  </div>
 </footer>
 
 <script src="script.js"></script>

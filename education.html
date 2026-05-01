@@ -3,166 +3,160 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jun-You Ye — Education">
-  <title>Jun-You Ye — Education</title>
+  <meta name="description" content="葉軍佑 Jun-You Ye — Quests &amp; Daily. 主線任務與日常養成。">
+  <title>葉軍佑 — Quests</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Card & Timeline */
-    .tl {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .card {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.5rem;
-      transition: all 0.4s var(--transition);
-    }
-
-    .card:hover {
-      box-shadow: var(--shadow-hover);
-      border-color: var(--border-light);
-      transform: translateY(-2px);
-    }
-
-    .tl-card {
-      display: grid;
-      grid-template-columns: 100px 1fr;
-      gap: 1.2rem;
-      align-items: start;
-    }
-
-    .tl-date {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--text-3);
-      letter-spacing: 0.04em;
-      padding-top: 0.25rem;
-      line-height: 1.5;
-    }
-
-    .tl-title {
-      font-size: 1.08rem;
-      font-weight: 500;
-      color: var(--text-1);
-      margin-bottom: 0.1rem;
-    }
-
-    .tl-sub {
-      font-size: 0.88rem;
-      color: var(--text-3);
-      margin-bottom: 0.5rem;
-    }
-
-    .tl-body {
-      font-size: 0.88rem;
-      color: var(--text-2);
-      line-height: 1.75;
-    }
-
-    .tl-body li {
-      list-style: none;
-      padding-left: 0.9rem;
-      position: relative;
-      margin-bottom: 0.15rem;
-    }
-
-    .tl-body li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.6em;
-      width: 4px;
-      height: 4px;
-      border-radius: 50%;
-      background: var(--gold);
-    }
-
-    @media (max-width: 640px) {
-      .tl-card { grid-template-columns: 1fr; gap: 0.2rem; }
-    }
-  </style>
 </head>
 <body>
 
 <nav id="nav" aria-label="Navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">JY</a>
+    <a href="index.html" class="nav-logo">JY · 02</a>
     <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>About</a></li>
-      <li><a href="experience.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Experience</a></li>
-      <li><a href="education.html"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>Education</a></li>
-      <li><a href="certs.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>Certifications</a></li>
-      <li><a href="skills.html"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Skills</a></li>
+      <li><a href="index.html">Identity</a></li>
+      <li><a href="experience.html">Battlefield</a></li>
+      <li><a href="skills.html">Skill Tree</a></li>
+      <li><a href="education.html">Quests</a></li>
+      <li><a href="certs.html">Stats</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="page-header">
-  <h1 class="page-header-title">Education</h1>
-</div>
+<header class="guide-hero">
+  <div class="guide-hero-frame reveal">
+    <div class="frame-corners"></div>
+    <div class="guide-meta-row">
+      <div class="meta-l"><span>Chapter III</span><span>Quest Log · Open</span></div>
+      <div class="meta-r"><span>Section · Quests &amp; Daily</span></div>
+    </div>
+    <div class="guide-eyebrow">Quest Log</div>
+    <h1 class="guide-name" style="font-size:3rem;">學歷主線 · 90 天行動</h1>
+    <div class="guide-name-en">Academic Quest · Daily Routine</div>
+    <p class="guide-tagline">
+      正式經驗值來源──<strong>學歷主線</strong>已封存於存檔；<br>
+      本版本的<strong>當前任務</strong>：把資料、流程與內容練成可長期累積的資產。
+    </p>
+  </div>
+</header>
 
 <div class="container">
   <main>
+
+    <!-- ===== PART III — QUESTS & STATS ===== -->
     <section>
-      <div class="reveal">
-        <div class="section-label">
-          <svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>
-          <h2>Academic Background</h2>
-        </div>
+      <div class="part-header reveal">
+        <span class="part-label">Part III</span>
+        <span class="part-tag"><span class="zh">實戰任務與屬性</span> Quests &amp; Stats</span>
+        <span class="part-line"></span>
       </div>
-      <div class="tl">
-        <div class="card tl-card reveal d1">
-          <div class="tl-date">2018.09<br>— 2022.06</div>
-          <div class="tl-content">
-            <div class="tl-title">國立勤益科技大學</div>
-            <div class="tl-sub">資訊管理系 ・ 學士</div>
-            <div class="tl-body">
-              <ul>
-                <li>大一上學期班級排名第一，商管與人文類科目表現尤為突出</li>
-                <li>在學期間取得多項國際與國家級專業證照，展現自主學習與目標執行力</li>
-                <li>具備跨領域整合能力，擅長將制度邏輯轉化為實務理解</li>
-              </ul>
-            </div>
+
+      <div class="card-grid two">
+
+        <!-- Academic Main Quest (sealed) -->
+        <article class="guide-card reveal d1">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>010  ten</span>
+            <span class="card-tag main-quest">Main Quest · Cleared</span>
           </div>
-        </div>
-        <div class="card tl-card reveal d2">
-          <div class="tl-date">2015.09<br>— 2018.06</div>
-          <div class="tl-content">
-            <div class="tl-title">國立新竹高級商業職業學校</div>
-            <div class="tl-sub">資料處理科</div>
-            <div class="tl-body">
-              <ul>
-                <li>學習商業資料處理、程式設計及會計學等實務課程</li>
-                <li>奠定資訊與商業整合之基礎能力</li>
-              </ul>
+          <h2 class="card-title">學歷主線 · 已通關</h2>
+          <div class="card-subtitle">Academic Background · Sealed</div>
+          <div class="card-body">
+
+            <div class="day-block">
+              <div class="day-tag">2018.09 — 2022.06 <span class="zh">/ 學士</span></div>
+              <div class="day-title">國立勤益科技大學 · 資訊管理系</div>
+              <div class="day-desc">大一上學期班級排名第一，商管與人文類科目突出；在學期間取得多項國家級與國際專業證照，展現自主學習與目標執行力。</div>
             </div>
+
+            <div class="day-block">
+              <div class="day-tag">2015.09 — 2018.06 <span class="zh">/ 高職</span></div>
+              <div class="day-title">國立新竹高級商業職業學校 · 資料處理科</div>
+              <div class="day-desc">商業資料處理、程式設計、會計學等實務課程，奠定資訊與商業整合之基礎。</div>
+            </div>
+
+            <div class="card-quote" style="margin-top:0.85rem;">學歷不是終局，是版本 1.0 的存檔資料。</div>
           </div>
-        </div>
+        </article>
+
+        <!-- 90-day mission -->
+        <article class="guide-card reveal d2">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>011  ten</span>
+            <span class="card-tag main-quest">Main Quest · 90D</span>
+          </div>
+          <h2 class="card-title">90 天主線任務</h2>
+          <div class="card-subtitle">Three-Phase Mission</div>
+          <div class="card-body" style="padding-top:0.4rem;">
+
+            <div class="day-block">
+              <div class="day-tag">Day 01 — 30 <span class="zh">/ 建立識別</span></div>
+              <div class="day-title">確定名稱、口號、模板</div>
+              <div class="day-desc">產出 15 支 30–60 秒短內容；格式：點出題目 → 正確做法 → 一個可立即執行的小任務。</div>
+            </div>
+
+            <div class="day-block">
+              <div class="day-tag">Day 31 — 60 <span class="zh">/ 強化深度</span></div>
+              <div class="day-title">看收藏率，不只看觀看</div>
+              <div class="day-desc">工具型內容：收據、條件、文件夾命名 → 加強文件感；職場留言型 → 加強情緒；中階分享多型 → 加強流程感。</div>
+            </div>
+
+            <div class="day-block">
+              <div class="day-tag">Day 61 — 90 <span class="zh">/ 開放產品化</span></div>
+              <div class="day-title">免費模板換訂閱</div>
+              <div class="day-desc">人生文件備分清單、Excel 紀錄表、會議紀錄、交接文件、履歷成果整理表、報稅清單。</div>
+            </div>
+
+            <div class="card-quote" style="margin-top:0.85rem;">90 天目標：30 支內容 · 3 個模板 · 1 個品牌頁面。</div>
+          </div>
+        </article>
+
       </div>
+
+      <!-- Daily / weekly card -->
+      <div class="card-grid one" style="margin-top:1.1rem;">
+        <article class="guide-card reveal d3">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>012  ten</span>
+            <span class="card-tag daily">Daily / Weekly</span>
+          </div>
+          <h2 class="card-title">每日行動準則</h2>
+          <div class="card-subtitle">Repeatable Quests · 2026</div>
+          <div class="card-body">
+            <ul class="card-list">
+              <li><span class="marker">每日</span>記下一個觀察到的「大人世界常見問題」當素材</li>
+              <li><span class="marker">每週</span>產出 2 支短影音，不求完美，但求清楚</li>
+              <li><span class="marker">每週</span>整理 1 個模板 · 模板才是變現基礎</li>
+              <li><span class="marker">每月</span>回顧數據：用數據判斷觀眾要什麼，不用情緒判斷自己</li>
+              <li><span class="marker">每季</span>完成 1 個小產品（模板包 / 電子書 / 小課程 / 講座）</li>
+              <li><span class="marker">原則</span>不只教工具，要教情境</li>
+              <li><span class="marker">原則</span>不要害怕內容太基礎，受眾不是專家，是想變成熟卻不知從何開始的人</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+
     </section>
+
   </main>
 </div>
 
 <footer>
-  <div class="footer-line"></div>
-  <a class="cta-primary" href="mailto:jun-you.ye@outlook.com" style="margin: 0.8rem auto; display: inline-flex;">
-    <svg viewBox="0 0 24 24" role="img" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.5;">
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-      <polyline points="22,6 12,13 2,6"/>
-    </svg>
-    Contact
-  </a>
-  <div class="footer-copy">© 2026 — Built with purpose.</div>
+  <div class="footer-row">
+    <span>© 2026 · Personal Strategy Guide · 葉軍佑</span>
+    <a class="footer-contact" href="mailto:jun-you.ye@outlook.com">
+      <svg viewBox="0 0 24 24" role="img"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Contact
+    </a>
+    <span>Save Loaded · 2026.05.01</span>
+  </div>
 </footer>
 
 <script src="script.js"></script>

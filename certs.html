@@ -3,193 +3,178 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jun-You Ye — Certifications">
-  <title>Jun-You Ye — Certifications</title>
+  <meta name="description" content="葉軍佑 Jun-You Ye — Stats &amp; Unlocked. 解鎖技能與證照。">
+  <title>葉軍佑 — Stats</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Cert Grid */
-    .cert-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem;
-    }
-
-    .cert-card {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.2rem 1.3rem;
-      transition: all 0.4s var(--transition);
-    }
-
-    .cert-card:hover {
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-2px);
-    }
-
-    .cert-card-label {
-      font-family: 'Outfit', 'Noto Sans TC', sans-serif;
-      font-size: 0.74rem;
-      font-weight: 600;
-      letter-spacing: 0.08em;
-      color: var(--text-3);
-      margin-bottom: 0.7rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 1px solid var(--border-light);
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-    }
-
-    .cert-card-label svg {
-      width: 14px;
-      height: 14px;
-      stroke: var(--gold);
-      fill: none;
-      stroke-width: 1.5;
-      flex-shrink: 0;
-    }
-
-    .cert-row {
-      padding: 0.3rem 0;
-    }
-
-    .cert-row-name {
-      font-size: 0.88rem;
-      color: var(--text-1);
-      font-weight: 400;
-      line-height: 1.45;
-    }
-
-    .cert-row-meta {
-      font-size: 0.76rem;
-      color: var(--text-3);
-      font-weight: 300;
-      margin-top: 0.05rem;
-    }
-
-    @media (max-width: 640px) {
-      .cert-container { grid-template-columns: 1fr; }
-    }
-
-    @media print {
-      .cert-container { grid-template-columns: 1fr 1fr; }
-    }
-  </style>
 </head>
 <body>
 
 <nav id="nav" aria-label="Navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">JY</a>
+    <a href="index.html" class="nav-logo">JY · 02</a>
     <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>About</a></li>
-      <li><a href="experience.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Experience</a></li>
-      <li><a href="education.html"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>Education</a></li>
-      <li><a href="certs.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>Certifications</a></li>
-      <li><a href="skills.html"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Skills</a></li>
+      <li><a href="index.html">Identity</a></li>
+      <li><a href="experience.html">Battlefield</a></li>
+      <li><a href="skills.html">Skill Tree</a></li>
+      <li><a href="education.html">Quests</a></li>
+      <li><a href="certs.html">Stats</a></li>
     </ul>
   </div>
 </nav>
 
-<div class="page-header">
-  <h1 class="page-header-title">Certifications</h1>
-</div>
+<header class="guide-hero">
+  <div class="guide-hero-frame reveal">
+    <div class="frame-corners"></div>
+    <div class="guide-meta-row">
+      <div class="meta-l"><span>Chapter III · B</span><span>Inventory · Verified</span></div>
+      <div class="meta-r"><span>Section · Stats &amp; Unlocked</span></div>
+    </div>
+    <div class="guide-eyebrow">Stats · Achievements</div>
+    <h1 class="guide-name" style="font-size:3rem;">解鎖證照 · 認證紀錄</h1>
+    <div class="guide-name-en">Certifications · Unlocked</div>
+    <p class="guide-tagline">
+      證照不是裝飾品，是<strong>角色屬性面板</strong>──每一張代表一塊已驗證的能力區。<br>
+      共 <strong>10</strong> 張：技術士 × 2 / 會計 × 1 / Microsoft × 3 / ERP &amp; CRM × 4。
+    </p>
+  </div>
+</header>
 
 <div class="container">
   <main>
+
+    <!-- ===== PART III · B — STATS ===== -->
     <section>
-      <div class="reveal">
-        <div class="section-label">
-          <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>
-          <h2>Credentials</h2>
-        </div>
+      <div class="part-header reveal">
+        <span class="part-label">Part III</span>
+        <span class="part-tag"><span class="zh">屬性面板</span> Stats · Unlocked</span>
+        <span class="part-line"></span>
       </div>
-      <div class="cert-container">
-        <div class="cert-card reveal d1">
-          <div class="cert-card-label">
-            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-            國家技術士證照
+
+      <div class="card-grid two">
+
+        <!-- 國家技術士 -->
+        <article class="guide-card reveal d1">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>013  ten</span>
+            <span class="card-tag title-up">National Tier</span>
           </div>
-          <div class="cert-row">
-            <div class="cert-row-name">乙級電腦軟體應用技術士</div>
-            <div class="cert-row-meta">勞動部勞動力發展署</div>
+          <h2 class="card-title">國家技術士證照</h2>
+          <div class="card-subtitle">National Skill Certification</div>
+          <div class="card-body" style="padding-top:0.2rem;">
+            <div class="day-block">
+              <div class="day-tag">Verified <span class="zh">/ 勞動部</span></div>
+              <div class="day-title">乙級 · 電腦軟體應用技術士</div>
+              <div class="day-desc">勞動部勞動力發展署</div>
+            </div>
+            <div class="day-block">
+              <div class="day-tag">Verified <span class="zh">/ 勞動部</span></div>
+              <div class="day-title">丙級 · 會計事務技術士</div>
+              <div class="day-desc">勞動部勞動力發展署</div>
+            </div>
           </div>
-          <div class="cert-row">
-            <div class="cert-row-name">丙級會計事務技術士</div>
-            <div class="cert-row-meta">勞動部勞動力發展署</div>
+        </article>
+
+        <!-- 財務會計 -->
+        <article class="guide-card reveal d2">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>014  ten</span>
+            <span class="card-tag content">Finance Track</span>
           </div>
-        </div>
-        <div class="cert-card reveal d2">
-          <div class="cert-card-label">
-            <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-            財務會計
+          <h2 class="card-title">財務會計能力</h2>
+          <div class="card-subtitle">Accounting · Verified</div>
+          <div class="card-body" style="padding-top:0.2rem;">
+            <div class="day-block">
+              <div class="day-tag">Verified <span class="zh">/ 公會</span></div>
+              <div class="day-title">會計能力測驗 · 一級合格</div>
+              <div class="day-desc">中華民國會計師公會全聯會</div>
+            </div>
+            <div class="card-quote" style="margin-top:0.85rem;">會計不是只會記帳，是把資源流動寫成可讀資料。</div>
           </div>
-          <div class="cert-row">
-            <div class="cert-row-name">會計能力測驗一級合格</div>
-            <div class="cert-row-meta">中華民國會計師公會全聯會</div>
+        </article>
+
+        <!-- Microsoft -->
+        <article class="guide-card reveal d3">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>015  ten</span>
+            <span class="card-tag battlefield">Microsoft × 3</span>
           </div>
-        </div>
-        <div class="cert-card reveal d3">
-          <div class="cert-card-label">
-            <svg viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-            Microsoft 國際認證
+          <h2 class="card-title">Microsoft 國際認證</h2>
+          <div class="card-subtitle">MTA · International</div>
+          <div class="card-body" style="padding-top:0.2rem;">
+            <div class="day-block">
+              <div class="day-tag">2019.06 <span class="zh">/ Microsoft</span></div>
+              <div class="day-title">MTA · Networking Fundamentals</div>
+              <div class="day-desc">網路基礎 · 國際認證</div>
+            </div>
+            <div class="day-block">
+              <div class="day-tag">2019.06 <span class="zh">/ Microsoft</span></div>
+              <div class="day-title">MTA · Software Development Fundamentals</div>
+              <div class="day-desc">軟體開發基礎 · 國際認證</div>
+            </div>
+            <div class="day-block">
+              <div class="day-tag">2019.12 <span class="zh">/ Microsoft</span></div>
+              <div class="day-title">MTA · Database Fundamentals</div>
+              <div class="day-desc">資料庫基礎 · 國際認證</div>
+            </div>
           </div>
-          <div class="cert-row">
-            <div class="cert-row-name">MTA: Networking Fundamentals</div>
-            <div class="cert-row-meta">2019.06 ・ Microsoft</div>
+        </article>
+
+        <!-- ERP / CRM -->
+        <article class="guide-card reveal d4">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>016  ten</span>
+            <span class="card-tag skill-tree">ERP · CRM × 4</span>
           </div>
-          <div class="cert-row">
-            <div class="cert-row-name">MTA: Software Development Fundamentals</div>
-            <div class="cert-row-meta">2019.06 ・ Microsoft</div>
+          <h2 class="card-title">ERP / CRM 系統認證</h2>
+          <div class="card-subtitle">System &amp; Process Stack</div>
+          <div class="card-body" style="padding-top:0.2rem;">
+            <div class="day-block">
+              <div class="day-tag">2020.06 <span class="zh">/ CERPS</span></div>
+              <div class="day-title">ERP 規劃師</div>
+              <div class="day-desc">中華企業資源規劃學會</div>
+            </div>
+            <div class="day-block">
+              <div class="day-tag">2020.11 <span class="zh">/ 微析科技</span></div>
+              <div class="day-title">CRM 顧客關係管理商品分析師</div>
+              <div class="day-desc">資料導向分析模組</div>
+            </div>
+            <div class="day-block">
+              <div class="day-tag">2021.06 <span class="zh">/ 鼎新</span></div>
+              <div class="day-title">ERP 軟體應用師 · 製造模組</div>
+              <div class="day-desc">Workflow ERP GP</div>
+            </div>
+            <div class="day-block">
+              <div class="day-tag">2021.06 <span class="zh">/ 鼎新</span></div>
+              <div class="day-title">ERP 軟體應用師 · 財務模組</div>
+              <div class="day-desc">Workflow ERP GP</div>
+            </div>
           </div>
-          <div class="cert-row">
-            <div class="cert-row-name">MTA: Database Fundamentals</div>
-            <div class="cert-row-meta">2019.12 ・ Microsoft</div>
-          </div>
-        </div>
-        <div class="cert-card reveal d4">
-          <div class="cert-card-label">
-            <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-            ERP / CRM 認證
-          </div>
-          <div class="cert-row">
-            <div class="cert-row-name">ERP 規劃師</div>
-            <div class="cert-row-meta">2020.06 ・ CERPS 中華企業資源規劃學會</div>
-          </div>
-          <div class="cert-row">
-            <div class="cert-row-name">CRM 顧客關係管理商品分析師</div>
-            <div class="cert-row-meta">2020.11 ・ 微析科技</div>
-          </div>
-          <div class="cert-row">
-            <div class="cert-row-name">ERP 軟體應用師 — 製造模組</div>
-            <div class="cert-row-meta">2021.06 ・ 鼎新 Workflow ERP GP</div>
-          </div>
-          <div class="cert-row">
-            <div class="cert-row-name">ERP 軟體應用師 — 財務模組</div>
-            <div class="cert-row-meta">2021.06 ・ 鼎新 Workflow ERP GP</div>
-          </div>
-        </div>
+        </article>
+
       </div>
     </section>
+
   </main>
 </div>
 
 <footer>
-  <div class="footer-line"></div>
-  <a class="cta-primary" href="mailto:jun-you.ye@outlook.com" style="margin: 0.8rem auto; display: inline-flex;">
-    <svg viewBox="0 0 24 24" role="img" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.5;">
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-      <polyline points="22,6 12,13 2,6"/>
-    </svg>
-    Contact
-  </a>
-  <div class="footer-copy">© 2026 — Built with purpose.</div>
+  <div class="footer-row">
+    <span>© 2026 · Personal Strategy Guide · 葉軍佑</span>
+    <a class="footer-contact" href="mailto:jun-you.ye@outlook.com">
+      <svg viewBox="0 0 24 24" role="img"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Contact
+    </a>
+    <span>Save Loaded · 2026.05.01</span>
+  </div>
 </footer>
 
 <script src="script.js"></script>

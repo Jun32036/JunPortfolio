@@ -3,210 +3,182 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Jun-You Ye — Warehouse Management Specialist with 3+ years in semiconductor manufacturing.">
-  <title>Jun-You Ye — About</title>
+  <meta name="description" content="葉軍佑 Jun-You Ye — Character Strategy Guide. 從後勤者走向系統設計者。">
+  <title>葉軍佑 — Character Strategy Guide</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <style>
-    /* Hero */
-    .hero {
-      padding: 6.5rem 1.5rem 3rem;
-      text-align: center;
-      position: relative;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(ellipse at center, rgba(198, 153, 90, 0.06) 0%, transparent 65%);
-      pointer-events: none;
-    }
-
-    .hero-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 3.5rem;
-      font-weight: 400;
-      color: var(--text-1);
-      line-height: 1.1;
-      opacity: 0;
-      animation: fadeUp 0.7s var(--transition) 0.2s forwards;
-    }
-
-    .hero-name-en {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 300;
-      color: var(--text-3);
-      letter-spacing: 0.2em;
-      margin-bottom: 1.2rem;
-    }
-
-    .hero-role {
-      font-family: 'Outfit', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 500;
-      color: var(--accent);
-      letter-spacing: 0.06em;
-      margin-bottom: 0.8rem;
-    }
-
-    /* About Grid */
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 0.8rem;
-    }
-
-    .about-card {
-      background: var(--bg-elevated);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.3rem;
-      transition: all 0.4s var(--transition);
-    }
-
-    .about-card:hover {
-      box-shadow: var(--shadow-hover);
-      transform: translateY(-2px);
-    }
-
-    .about-icon {
-      width: 36px;
-      height: 36px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-bottom: 0.8rem;
-    }
-
-    .about-icon svg {
-      width: 18px;
-      height: 18px;
-      stroke-width: 1.5;
-      fill: none;
-    }
-
-    .about-card h3 {
-      font-family: 'Noto Sans TC', sans-serif;
-      font-size: 0.85rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      color: var(--text-1);
-      margin-bottom: 0.3rem;
-    }
-
-    .about-card p {
-      font-size: 0.88rem;
-      color: var(--text-2);
-      line-height: 1.6;
-      font-weight: 300;
-    }
-
-    @media (max-width: 760px) {
-      .about-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 640px) {
-      .hero-name { font-size: 2.5rem; }
-      .section-title { font-size: 1.45rem; }
-      .about-grid { grid-template-columns: 1fr; }
-    }
-
-    @media print {
-      .about-grid { grid-template-columns: 1fr 1fr 1fr; }
-    }
-  </style>
 </head>
 <body>
 
 <nav id="nav" aria-label="Navigation">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo">JY</a>
+    <a href="index.html" class="nav-logo">JY · 02</a>
     <button class="hamburger" aria-label="Open menu" onclick="document.querySelector('.nav-links').classList.toggle('open')">
       <span></span><span></span><span></span>
     </button>
     <ul class="nav-links">
-      <li><a href="index.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M20 21a8 8 0 1 0-16 0"/></svg>About</a></li>
-      <li><a href="experience.html"><svg viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/></svg>Experience</a></li>
-      <li><a href="education.html"><svg viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 6 3 6 3s6-1 6-3v-5"/></svg>Education</a></li>
-      <li><a href="certs.html"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M8.21 13.89L7 23l5-3 5 3-1.21-9.12"/></svg>Certifications</a></li>
-      <li><a href="skills.html"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>Skills</a></li>
+      <li><a href="index.html">Identity</a></li>
+      <li><a href="experience.html">Battlefield</a></li>
+      <li><a href="skills.html">Skill Tree</a></li>
+      <li><a href="education.html">Quests</a></li>
+      <li><a href="certs.html">Stats</a></li>
     </ul>
   </div>
 </nav>
 
-<section class="hero">
-  <h1 class="hero-name">JUN-YOU YE</h1>
+<!-- ===== HERO ===== -->
+<header class="guide-hero">
+  <div class="guide-hero-frame reveal">
+    <div class="frame-corners"></div>
 
-  <!-- 職業定位 -->
-  <div class="hero-role">
-    Warehouse Operations · Return Flow Optimization · Data-Driven Execution
+    <div class="guide-meta-row">
+      <div class="meta-l">
+        <span>Server · Taiwan</span>
+        <span>Status · Online</span>
+      </div>
+      <div class="meta-r">
+        <span>Version 2026.05.01</span>
+        <span>Patch Notes Vol. 02</span>
+      </div>
+    </div>
+
+    <div class="guide-eyebrow">Character Strategy Guide</div>
+    <h1 class="guide-name">葉軍佑</h1>
+    <div class="guide-name-en">Jun-You Ye</div>
+
+    <p class="guide-tagline">
+      從<strong>「後勤者」</strong>走向<strong>「系統設計者」</strong>。<br>
+      你不是走偏，只是把自己定義得太小──本版本起，重新登入。
+    </p>
+
+    <div class="stat-row">
+      <div class="stat-cell">
+        <div class="stat-label">Server</div>
+        <div class="stat-value">台灣<span class="en">/ Taiwan</span></div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Version</div>
+        <div class="stat-value">2026<span class="en">/ 定型年</span></div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Class</div>
+        <div class="stat-value">後勤者<span class="arrow">▶</span>系統設計者</div>
+      </div>
+      <div class="stat-cell">
+        <div class="stat-label">Element</div>
+        <div class="stat-value">外柔內烈<span class="en">/ 後發型</span></div>
+      </div>
+    </div>
   </div>
-
-  <!-- 一句話價值主張 -->
-  <p style="margin-top:0.8rem; color:var(--text-2); font-size:0.9rem;">
-    專注於回貨流程與倉儲營運，透過流程理解與數據輔助，提升效率與穩定性
-  </p>
-</section>
+</header>
 
 <div class="container">
   <main>
-    <section id="about">
-      <div class="section-label">
-        <h2>About</h2>
+
+    <!-- ===== PART I — CORE IDENTITY ===== -->
+    <section>
+      <div class="part-header reveal">
+        <span class="part-label">Part I</span>
+        <span class="part-tag"><span class="zh">命格與身份</span> Core Identity</span>
+        <span class="part-line"></span>
       </div>
 
-      <div class="about-grid">
+      <div class="card-grid">
 
-        <div class="about-card">
-          <h3>Resilience</h3>
-          <p>在高出貨量與突發異常下維持作業節奏與準確率，確保回貨與盤點如期完成</p>
-        </div>
+        <article class="guide-card reveal d1">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>001  ten</span>
+            <span class="card-tag passive">Passive <span class="sep">|</span> SSR</span>
+          </div>
+          <h2 class="card-title">外柔內烈，越磨越亮</h2>
+          <div class="card-subtitle">Core Trait · Innate</div>
+          <div class="card-body">
+            <p>角色為<span class="hl">後發型命格</span>。表面柔和、配合度高，但體內藏有<span class="hl">牡羊之火</span>──渴望開創與證明，同時兼具女天秤特質，擅長<span class="hl-cyan">觀察、分析、整合系統</span>。</p>
+            <p>不是粗暴型開創者，而是<span class="hl">理解系統後再重新設計系統</span>的人。早期看似平凡，越到後期越能從砂礫經驗中長出主軸。</p>
+            <div class="card-quote">真正的能力不是單一技能，而是把混亂整理成秩序的整合力。</div>
+          </div>
+        </article>
 
-        <div class="about-card">
-          <h3>Business Acumen</h3>
-          <p>理解回貨流程對產線與交期影響，優先處理關鍵異常以降低整體延誤風險</p>
-        </div>
+        <article class="guide-card reveal d2">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>002  ten</span>
+            <span class="card-tag title-up">Title Up</span>
+          </div>
+          <h2 class="card-title">稱號升級包</h2>
+          <div class="card-subtitle">Self · Re-Translation</div>
+          <div class="card-body">
+            <p>2018 年那份 18 歲履歷不是錯譯，是初版翻譯。本版本起，更換稱號：</p>
+            <ul class="card-list">
+              <li><span class="marker">倉管</span>把混亂整理成秩序</li>
+              <li><span class="marker">資料</span>把資料轉成決策依據</li>
+              <li><span class="marker">流程</span>設計流程、降低錯誤、提升效率</li>
+            </ul>
+          </div>
+        </article>
 
-        <div class="about-card">
-          <h3>Execution</h3>
-          <p>落實標準作業並持續優化細節，提升日常作業效率與穩定度</p>
-        </div>
+        <article class="guide-card reveal d3">
+          <div class="corners"></div>
+          <div class="card-meta">
+            <span class="card-id"><span class="hash">#</span>003  ten</span>
+            <span class="card-tag main-quest">Main Quest 2026</span>
+          </div>
+          <h2 class="card-title">2026 主線：定型年</h2>
+          <div class="card-subtitle">Annual Theme · Identity Lock</div>
+          <div class="card-body">
+            <p>本版本核心命題：<span class="hl">定義方向、建立身份</span>。</p>
+            <p>停止使用舊問句「我可以做什麼？」<br>切換為新問句：「我想讓別人因為什麼而想到我？」</p>
+            <p>本年不追求一次爆紅，目標為<span class="hl">累積信任資產</span>──適合<span class="hl-cyan">走信任型、實用型、秩序型、陪伴型</span>的知識品牌路線。</p>
+          </div>
+        </article>
 
       </div>
-      <div style="margin-top:2.5rem;">
-        <h3 style="font-size:0.9rem; letter-spacing:0.05em; margin-bottom:0.8rem;">
-          Key Contributions
-        </h3>
-
-        <ul style="color:var(--text-2); font-size:0.9rem; line-height:1.7; padding-left:1.2rem;">
-          <li>於高離職率期間維持回貨作業穩定，確保日常運作不中斷</li>
-          <li>協助執行盤點與庫存管理，維持作業準確性與一致性</li>
-          <li>處理回貨異常與流程銜接問題，降低錯誤與延誤風險</li>
-        </ul>
-      </div>
-
     </section>
+
+    <!-- ===== PART IV — PATCH MANIFESTO (closing) ===== -->
+    <section>
+      <div class="part-header reveal">
+        <span class="part-label">Part IV</span>
+        <span class="part-tag"><span class="zh">版本宣言</span> Patch Manifesto</span>
+        <span class="part-line"></span>
+      </div>
+
+      <div class="manifesto reveal d1">
+        <div class="corners"></div>
+        <div class="manifesto-tag">Final · Card 010</div>
+        <h2 class="manifesto-title">不要再把自己寫得那麼小</h2>
+        <div class="manifesto-subtitle">Version 2026 · Manifesto</div>
+
+        <div class="manifesto-body">
+          <p>你不是沒有方向。你只是一直把自己放在太小的位置。</p>
+          <p>你以為自己只是會做文書，其實你是<em>能夠人建立秩序</em>。</p>
+          <p>你以為自己只是會搬貨，其實你是<em>設計流程</em>。</p>
+          <p>你以為自己只是會處理資料，其實你是<em>讓人降低混亂</em>。</p>
+          <p>你以為自己只是懂一點資訊與會計，其實你是站在大人世界的入口，告訴別人該怎麼辦事。</p>
+        </div>
+
+        <div class="manifesto-final">
+          你沒有從過去那一刻開始走偏；<br>
+          你只是從現在這一刻開始，<br>
+          終於要把自己寫大。
+        </div>
+      </div>
+    </section>
+
   </main>
 </div>
 
 <footer>
-  <div class="footer-line"></div>
-  <a class="cta-primary" href="mailto:jun-you.ye@outlook.com" style="margin: 0.8rem auto; display: inline-flex;">
-    <svg viewBox="0 0 24 24" role="img" style="width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.5;">
-      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-      <polyline points="22,6 12,13 2,6"/>
-    </svg>
-    Contact
-  </a>
-  <div class="footer-copy">© 2026 — Built with purpose.</div>
+  <div class="footer-row">
+    <span>© 2026 · Personal Strategy Guide · 葉軍佑</span>
+    <a class="footer-contact" href="mailto:jun-you.ye@outlook.com">
+      <svg viewBox="0 0 24 24" role="img"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+      Contact
+    </a>
+    <span>Save Loaded · 2026.05.01</span>
+  </div>
 </footer>
 
 <script src="script.js"></script>
